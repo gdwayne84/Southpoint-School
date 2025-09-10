@@ -259,10 +259,10 @@ const Home: React.FC = () => {
                 <p className="mt-4 text-xl text-gray-600">From the first steps in preschool to the final years of senior high, we offer a complete and enriching educational journey.</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-16 h-[400px]">
-                <ProgramCard title="Preschool" img="https://images.unsplash.com/photo-1518611525243-65d1b71c89a7?q=80&w=2670&auto=format&fit=crop" link="/academics" />
-                <ProgramCard title="Grade School" img="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop" link="/academics" />
-                <ProgramCard title="Junior High" img="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2670&auto=format&fit=crop" link="/academics" />
-                <ProgramCard title="Senior High" img="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" link="/academics" />
+                <ProgramCard title="Preschool" img="https://images.unsplash.com/photo-1518611525243-65d1b71c89a7?q=80&w=2670&auto=format&fit=crop" link="/academics#preschool" />
+                <ProgramCard title="Grade School" img="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop" link="/academics#grade-school" />
+                <ProgramCard title="Junior High" img="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2670&auto=format&fit=crop" link="/academics#junior-high" />
+                <ProgramCard title="Senior High" img="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" link="/academics#senior-high" />
             </div>
         </div>
       </section>
