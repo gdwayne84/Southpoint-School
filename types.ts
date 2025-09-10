@@ -16,3 +16,9 @@ export interface FooterLink {
   label: string;
   path: string;
 }
+
+export interface CalendarEvent {
+  date: string; // "YYYY-MM-DD"
+  title: string;
+  category: 'Holiday' | 'Exam' | 'Event' | 'No Classes';
+}

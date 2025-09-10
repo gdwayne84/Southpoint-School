@@ -11,6 +11,7 @@ import ParentResources from './pages/ParentResources';
 import ContactUs from './pages/ContactUs';
 import NotFound from './pages/NotFound';
 import Gallery from './pages/Gallery';
+import Calendar from './pages/Calendar';
 
 const App: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const App: React.FC = () => {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/parent-resources" element={<ParentResources />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/calendar" element={<Calendar />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
