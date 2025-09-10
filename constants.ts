@@ -1,4 +1,4 @@
-import { NavLinkInfo, ResourceFile, FooterLink } from './types';
+import { NavLinkInfo, ResourceFile, FooterLink, CalendarEvent } from './types';
 
 export const NAV_LINKS: NavLinkInfo[] = [
   { label: 'Home', path: '/' },
@@ -16,6 +16,7 @@ export const NAV_LINKS: NavLinkInfo[] = [
     children: [
       { label: 'Student Life', path: '/student-life' },
       { label: 'Parent Resources', path: '/parent-resources' },
+      { label: 'School Calendar', path: '/calendar' },
     ]
   },
   { label: 'Contact Us', path: '/contact' },
