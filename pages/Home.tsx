@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const carouselImages = [
     {
-        src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2670&auto=format&fit=crop',
+        src: 'https://images.unsplash.com/photo-1681567012382-89ef28797e8b?q=80&w=2070&auto=format&fit=crop',
         alt: 'Happy graduates tossing their caps in the air'
     },
     {
-        src: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2670&auto=format&fit=crop',
+        src: 'https://images.unsplash.com/photo-1641395312870-5913789014cd?q=80&w=2070&auto=format&fit=crop',
         alt: 'Engaged students listening to a lecture in a modern classroom'
     },
     {
-        src: 'https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=2670&auto=format&fit=crop',
+        src: 'https://images.unsplash.com/photo-1642475668457-0cb6c801c988?q=80&w=2026&auto=format&fit=crop',
         alt: 'A diverse team of students collaborating around a table'
     }
 ];
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
   return (
     <div className="bg-gray-50">
       <Hero />
-      
+
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
@@ -135,18 +135,18 @@ const Home: React.FC = () => {
                 </p>
             </div>
             <div className="grid gap-8 md:grid-cols-3 mt-12">
-                <DifferenceCard 
-                    title="Personalized Learning Paths" 
+                <DifferenceCard
+                    title="Personalized Learning Paths"
                     description="Our low student-teacher ratio allows us to tailor educational strategies to individual strengths and passions, ensuring every student thrives."
                     icon={<LearningIcon />}
                 />
-                <DifferenceCard 
-                    title="Leadership & Character" 
+                <DifferenceCard
+                    title="Leadership & Character"
                     description="We instill core values and provide real-world leadership opportunities, cultivating confident and ethical citizens of tomorrow."
                     icon={<LeadershipIcon />}
                 />
-                <DifferenceCard 
-                    title="Innovation for a Global Future" 
+                <DifferenceCard
+                    title="Innovation for a Global Future"
                     description="With a curriculum focused on technology, critical thinking, and global awareness, we prepare students to excel in a rapidly changing world."
                     icon={<InnovationIcon />}
                 />
@@ -180,7 +180,7 @@ const Home: React.FC = () => {
             </div>
         </div>
       </section>
-      
+
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center max-w-3xl mx-auto">
@@ -189,13 +189,13 @@ const Home: React.FC = () => {
                 </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
-                <TestimonialCard 
+                <TestimonialCard
                     quote="Southpoint didn't just teach my daughter academics; it taught her confidence and compassion. The teachers genuinely care, and we've seen her blossom here."
                     name="Jennifer P."
                     role="Parent"
                     img="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&auto=format&fit=crop"
                 />
-                <TestimonialCard 
+                <TestimonialCard
                     quote="The skills and friendships I gained at Southpoint were the perfect foundation for university and my career. I felt prepared for every challenge that came my way."
                     name="Michael B."
                     role="Alumnus, Class of 2018"
