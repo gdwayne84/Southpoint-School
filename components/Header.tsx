@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
-  
+
   useEffect(() => {
     const body = document.querySelector('body');
     if (body) {
@@ -50,9 +50,9 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex-shrink-0">
-              <NavLink to="/" className="text-battle-green text-2xl font-bold tracking-wider">
-                Southpoint School
-              </NavLink>
+            <NavLink to="/" className="flex items-center gap-3">
+              <img src="https://www.southpointschool.edu.ph/images/logo.jpg" alt="Southpoint School Logo" className="h-12 w-auto" />
+            </NavLink>
             </div>
             <nav className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-2">
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
                       <NavLink
                         to={link.path!}
                         end
-                        className={({ isActive }) => 
+                        className={({ isActive }) =>
                           `relative group px-3 py-2 text-sm font-medium transition-colors duration-300 ${isActive ? 'text-battle-green' : 'text-gray-700 hover:text-battle-green'}`
                         }
                       >

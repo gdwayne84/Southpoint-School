@@ -90,33 +90,114 @@ const Hero = () => (
     </div>
 );
 
+
+const LearningIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-battle-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+);
+const LeadershipIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-battle-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+    </svg>
+);
+const InnovationIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-battle-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311l-3.75 0m3.75-7.478c.097-.519.162-1.04.19-1.567m-1.5.189c-.255-.26-.54-.51-.85-.743m-5.1 0c.35.233.68.483 1.01.743m1.15-5.045a12.06 12.06 0 01-4.5 0m3.75 2.311l-3.75 0" />
+    </svg>
+);
+
 const DifferenceCard: React.FC<{ title: string; description: string; icon: React.ReactNode }> = ({ title, description, icon }) => (
-    <div className="bg-white p-8 rounded-2xl shadow-lg text-left transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-        <div className="flex items-center justify-center h-16 w-16 rounded-2xl bg-green-100 text-battle-green mb-5">
+    <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+        <div className="bg-green-100 p-4 rounded-full mb-6">
             {icon}
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-600 leading-relaxed">{description}</p>
     </div>
 );
 
-const LearningIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>;
-const LeadershipIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 1.5l.93 2.28a1 1 0 00.94.67h2.38a1 1 0 01.97 1.24l-1.93 4.5a1 1 0 00.33 1.11l1.9 1.9a1 1 0 01-.7 1.7L15 15.5a1 1 0 00-1 .5l-1 2a1 1 0 01-1.78 0l-1-2a1 1 0 00-1-.5l-2.75-.55a1 1 0 01-.7-1.7l1.9-1.9a1 1 0 00.33-1.11l-1.93-4.5a1 1 0 01.97-1.24h2.38a1 1 0 00.94-.67L12 1.5z" /></svg>;
-const InnovationIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>;
-
-
-const TestimonialCard: React.FC<{ quote: string; name: string; role: string; img: string; }> = ({ quote, name, role, img }) => (
-    <div className="bg-battle-green p-8 rounded-2xl shadow-lg text-white">
-        <p className="text-lg italic text-green-100">"{quote}"</p>
-        <div className="flex items-center mt-6">
-            <img src={img} alt={name} className="w-14 h-14 rounded-full object-cover" />
-            <div className="ml-4">
-                <p className="font-bold text-white">{name}</p>
-                <p className="text-green-200">{role}</p>
-            </div>
+const ProgramCard: React.FC<{ title: string; img: string; link: string; }> = ({ title, img, link }) => (
+    <div className="group relative rounded-2xl overflow-hidden shadow-lg">
+        <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 p-6">
+            <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
+            <Link to={link} className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-x-4 group-hover:translate-x-0">
+                Learn More &rarr;
+            </Link>
         </div>
     </div>
 );
+
+const testimonials = [
+    {
+        quote: "Southpoint didn't just teach my daughter academics; it taught her confidence and compassion. The teachers genuinely care, and we've seen her blossom here.",
+        name: "Jennifer P.",
+        role: "Parent",
+        img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&auto=format&fit=crop"
+    },
+    {
+        quote: "The skills and friendships I gained at Southpoint were the perfect foundation for university and my career. I felt prepared for every challenge that came my way.",
+        name: "Michael B.",
+        role: "Alumnus, Class of 2018",
+        img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=400&h=400&auto=format&fit=crop"
+    },
+    {
+        quote: "As an educator, I'm proud to be part of a community that prioritizes not just academic rigor, but also the emotional and social well-being of every student.",
+        name: "Ms. Chloe Nguyen",
+        role: "Faculty",
+        img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&h=400&auto=format&fit=crop"
+    }
+];
+
+const Testimonials = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    };
+
+    useEffect(() => {
+        const slider = setInterval(nextSlide, 7000); // Auto-slide every 7 seconds
+        return () => clearInterval(slider);
+    }, []);
+
+    return (
+        <div className="relative w-full max-w-4xl mx-auto">
+            <div className="overflow-hidden relative h-80">
+                {testimonials.map((testimonial, index) => (
+                    <div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                    >
+                        <div className="bg-white p-8 rounded-2xl shadow-xl h-full flex flex-col justify-center">
+                            <p className="text-xl italic text-gray-700 text-center mb-6">"{testimonial.quote}"</p>
+                            <div className="flex items-center justify-center">
+                                <img src={testimonial.img} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover" />
+                                <div className="ml-4 text-left">
+                                    <p className="font-bold text-battle-green">{testimonial.name}</p>
+                                    <p className="text-gray-500">{testimonial.role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <button onClick={prevSlide} aria-label="Previous testimonial" className="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-battle-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button onClick={nextSlide} aria-label="Next testimonial" className="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-battle-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </div>
+    );
+};
+
 
 const Home: React.FC = () => {
   return (
@@ -133,10 +214,10 @@ const Home: React.FC = () => {
                     We go beyond traditional education to provide an experience that shapes not just great students, but exceptional individuals.
                 </p>
             </div>
-            <div className="grid gap-8 md:grid-cols-3 mt-12">
+            <div className="grid gap-8 md:grid-cols-3 mt-16">
                 <DifferenceCard
-                    title="Personalized Learning Paths"
-                    description="Our low student-teacher ratio allows us to tailor educational strategies to individual strengths and passions, ensuring every student thrives."
+                    title="Personalized Learning"
+                    description="Our low student-teacher ratio allows us to tailor educational strategies to individual strengths, ensuring every student thrives."
                     icon={<LearningIcon />}
                 />
                 <DifferenceCard
@@ -145,81 +226,55 @@ const Home: React.FC = () => {
                     icon={<LeadershipIcon />}
                 />
                 <DifferenceCard
-                    title="Innovation for a Global Future"
-                    description="With a curriculum focused on technology, critical thinking, and global awareness, we prepare students to excel in a rapidly changing world."
+                    title="Future-Ready Innovation"
+                    description="With a curriculum focused on technology and global awareness, we prepare students to excel in a rapidly changing world."
                     icon={<InnovationIcon />}
                 />
             </div>
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                     <img
-                        src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2670&auto=format&fit=crop"
-                        alt="Engaged students in a modern classroom"
-                        className="rounded-2xl shadow-xl w-full h-auto object-cover"
-                    />
-                </div>
-                <div className="text-center md:text-left">
-                     <h2 className="text-4xl font-extrabold text-gray-900">
-                        A Community Built for Growth
-                    </h2>
-                    <p className="mt-4 text-xl text-gray-600">
-                       Discover an inclusive and supportive environment where lifelong friendships are forged, and a passion for learning is ignited. Our dedicated faculty are mentors who guide each student on their unique journey to success.
-                    </p>
-                    <div className="mt-8">
-                         <Link to="/about" className="text-battle-green font-bold text-lg hover:underline">
-                            Meet Our Team &rarr;
-                        </Link>
-                    </div>
-                </div>
+            <div className="text-center max-w-3xl mx-auto">
+                <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Explore Our Programs</h2>
+                <p className="mt-4 text-xl text-gray-600">From the first steps in preschool to the final years of senior high, we offer a complete and enriching educational journey.</p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-16 h-[400px]">
+                <ProgramCard title="Preschool" img="https://images.unsplash.com/photo-1518611525243-65d1b71c89a7?q=80&w=2670&auto=format&fit=crop" link="/academics" />
+                <ProgramCard title="Grade School" img="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop" link="/academics" />
+                <ProgramCard title="Junior High" img="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2670&auto=format&fit=crop" link="/academics" />
+                <ProgramCard title="Senior High" img="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" link="/academics" />
             </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-green-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="text-center max-w-3xl mx-auto">
+           <div className="text-center max-w-3xl mx-auto mb-16">
                 <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-                    Hear From Our Community
+                    Voices of Our Community
                 </h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
-                <TestimonialCard
-                    quote="Southpoint didn't just teach my daughter academics; it taught her confidence and compassion. The teachers genuinely care, and we've seen her blossom here."
-                    name="Jennifer P."
-                    role="Parent"
-                    img="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&auto=format&fit=crop"
-                />
-                <TestimonialCard
-                    quote="The skills and friendships I gained at Southpoint were the perfect foundation for university and my career. I felt prepared for every challenge that came my way."
-                    name="Michael B."
-                    role="Alumnus, Class of 2018"
-                    img="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=400&h=400&auto=format&fit=crop"
-                />
-            </div>
+            <Testimonials />
         </div>
       </section>
 
-       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="text-center bg-green-50 p-10 rounded-2xl">
-                <h2 className="text-4xl font-extrabold text-battle-green">Ready to Begin Your Journey?</h2>
-                <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-700">
-                    Take the next step. Schedule a visit to experience our vibrant campus or start your application today.
-                </p>
-                <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-                     <Link to="/contact" className="bg-battle-green hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-md w-full sm:w-auto">
-                        Schedule a Visit
-                    </Link>
-                    <Link to="/admissions" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-md w-full sm:w-auto">
-                        Apply Now
-                    </Link>
-                </div>
-           </div>
+       <section className="relative bg-battle-green py-20 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756ded668?q=80&w=2670&auto=format&fit=crop')"}}>
+        <div className="absolute inset-0 bg-battle-green/80"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h2 className="text-4xl sm:text-5xl font-extrabold">Ready to Begin Your Journey?</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-green-100">
+                Take the next step. Schedule a visit to experience our vibrant campus or start your application today.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <Link to="/contact" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
+                    Schedule a Visit
+                </Link>
+                <Link to="/admissions" className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 w-full sm:w-auto">
+                    Apply Now
+                </Link>
+            </div>
         </div>
       </section>
     </div>
