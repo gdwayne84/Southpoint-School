@@ -17,47 +17,46 @@ const carouselImages = [
 ];
 
 const HeroCarousel = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
-        }, 5000); // Change slide every 5 seconds
-        return () => clearInterval(timer);
-    }, []);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
-    return (
-        <div className="relative h-80 md:h-full w-full">
-            <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-2xl">
-                {carouselImages.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                            index === currentIndex ? 'opacity-100' : 'opacity-0'
-                        }`}
-                    >
-                        <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                ))}
-            </div>
-             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                {carouselImages.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setCurrentIndex(index)}
-                        aria-label={`Go to slide ${index + 1}`}
-                        className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
-                            index === currentIndex ? 'bg-white' : 'bg-white/50 hover:bg-white'
-                        }`}
-                    />
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <div className="relative h-80 md:h-[420px] w-full"> {/* explicit md height */}
+      <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-2xl">
+        {carouselImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        {carouselImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+              index === currentIndex ? 'bg-white' : 'bg-white/50 hover:bg-white'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 
