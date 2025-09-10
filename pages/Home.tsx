@@ -66,16 +66,16 @@ const Hero = () => (
             <div className="grid md:grid-cols-2 items-center gap-8 py-20 md:py-32">
                 <div className="relative z-10 text-center md:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-lg">
-                        Beyond the Classroom:
+                        More Than a School.
                         <br />
-                        <span className="text-green-300">Where Potential Meets Purpose.</span>
+                        <span className="text-green-300">A Place to Grow.</span>
                     </h1>
                     <p className="mt-6 max-w-xl mx-auto md:mx-0 text-lg sm:text-xl text-green-100">
-                        We are more than a school; we are a launchpad for the next generation of leaders, innovators, and compassionate global citizens.
+                    At Southpoint School, we don’t just teach;we inspire, mentor, and shape every student to become the best version of themselves.
                     </p>
                     <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
                         <Link to="/admissions" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
-                            Join Our Community
+                            Enroll Now
                         </Link>
                         <Link to="/academics" className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 w-full sm:w-auto">
                             Explore Programs
@@ -102,9 +102,25 @@ const LeadershipIcon = () => (
     </svg>
 );
 const InnovationIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-battle-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.311l-3.75 0m3.75-7.478c.097-.519.162-1.04.19-1.567m-1.5.189c-.255-.26-.54-.51-.85-.743m-5.1 0c.35.233.68.483 1.01.743m1.15-5.045a12.06 12.06 0 01-4.5 0m3.75 2.311l-3.75 0" />
-    </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-10 w-10 text-battle-green"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={1.5}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 2a7 7 0 00-4 12.75V17a2 2 0 002 2h4a2 2 0 002-2v-2.25A7 7 0 0012 2z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9 21h6m-3 0v1"
+    />
+  </svg>
 );
 
 const DifferenceCard: React.FC<{ title: string; description: string; icon: React.ReactNode }> = ({ title, description, icon }) => (
@@ -208,10 +224,12 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
                 <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-                    The Southpoint Difference
+                    What Makes Southpoint School Different?
                 </h2>
                 <p className="mt-4 text-xl text-gray-600">
-                    We go beyond traditional education to provide an experience that shapes not just great students, but exceptional individuals.
+                At Southpoint School, education is a journey of both heart and mind. More than academic excellence, we nurture future-ready leaders with strong values and a love for lifelong learning.
+                <br /><br />
+                What sets us apart is our commitment to developing the whole child through:
                 </p>
             </div>
             <div className="grid gap-8 md:grid-cols-3 mt-16">
