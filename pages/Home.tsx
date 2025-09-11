@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const carouselImages = [
     {
-        src: 'images/girl ict lab.jpeg',
+        src: 'images/girl-ict-lab.jpeg',
         alt: 'a girl raising hand in ict lab'
     },
     {
-        src: 'images/students gym2.jpeg',
+        src: 'images/students-gym2.jpeg',
         alt: 'students in the gym together'
     },
     {
-        src: 'images/boy classroom.jpeg',
+        src: 'images/boy-classroom.jpeg',
         alt: 'a boy raising hand in a classroom'
     }
 ];
