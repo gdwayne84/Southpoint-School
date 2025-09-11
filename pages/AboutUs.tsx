@@ -68,7 +68,7 @@ const AboutUs: React.FC = () => {
         };
 
         return (
-            <div className={`grid ${gridClasses[category]} gap-8 mx-auto`}>
+            <div className={`grid ${gridClasses[category]} gap-8`}>
                 {staffList.map(person => <StaffCard key={person.name} {...person} />)}
             </div>
         )
@@ -82,21 +82,22 @@ const AboutUs: React.FC = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
                  <div className="max-w-4xl mb-16">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-battle-green mb-10">Our School</h1>
-                    <p className="text-xl text-gray-600">Discover the history, philosophy, and values that define the Southpoint experience.</p>
+                    <p className="text-xl text-gray-600">Discover the history, mission, vision, and values that define the Southpoint School experience.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="order-2 md:order-1 prose prose-lg max-w-none text-gray-700">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">Our History</h2>
                         <p>
-                            Southpoint School was founded in 1993 with a vision to provide quality education to the community of Mandaue City and its neighboring towns. What began as a humble preschool has grown into a complete basic education institution, offering programs from nursery to senior high school.
+                        The school was established in 1995 by parents of bright and capable students who desired quality education and character formation, rendered by teachers with pastoral gifts.
                         </p>
                         <p>
-                            Over the years, we have remained committed to our founding principles of academic excellence, character formation, and community service.
+                        The founders, faculty and staff were of the conviction that early childhood through teens are the crucial years when the values of parents and their spiritual community, need to be reinforced by the school, where a student spends most of his active hours.
                         </p>
-
-                        <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-4">Our Philosophy</h2>
                         <p>
-                            We believe that education is a holistic process. It is not just about imparting knowledge but also about building character, fostering critical thinking, and inspiring a lifelong love for learning. We strive to create a safe, inclusive, and challenging environment for all.
+                        They believed that the three most important values are character, intelligence and leadership. For a student to enter college and prepare for his/her chosen profession, he/she needs to be academically disciplined, emotionally stable, founded on strong values, and able to lead him/herself before becoming a person of influence. It is for this reason that Southpoint School was founded – to prepare students for college, but also in some way, to prepare them for life.
+                        </p>
+                        <p>
+                        On its first year of operation, it offered only the Preschool level. Over the years, the school has grown and expanded to include complete Elementary and High School levels with more and more enrollees coming in every year. From its first rented campus, the school has gone on to build its present facility to accommodate its ever-growing clientele consisting not only of church members but of children from various cultural and religious backgrounds.
                         </p>
                     </div>
                     <div className="order-1 md:order-2">
@@ -113,12 +114,12 @@ const AboutUs: React.FC = () => {
         {/* School Video Section */}
         <div className="bg-white py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+            <div className="max-w-4xl">
+              <h2 className="text-4xl font-bold text-gray-800 mb-12">
                 A Glimpse Into Our School
               </h2>
             </div>
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl">
               <div
                 className="relative w-full overflow-hidden rounded-xl shadow-2xl"
                 style={{ paddingTop: "56.25%" }} // keeps 16:9 aspect ratio
@@ -138,7 +139,7 @@ const AboutUs: React.FC = () => {
         </div>
 
         {/* Vision & Mission Section */}
-        <div className="bg-white py-20">
+        <div className="bg-gray-50 py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                  <div className="grid md:grid-cols-2 gap-12">
                     <div>
@@ -162,8 +163,8 @@ const AboutUs: React.FC = () => {
         {/* Core Values Section */}
         <div className="bg-green-50 py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Our Core Values</h2>
+                <div className="max-w-4xl">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-12">Our Core Values</h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {coreValues.map(value => <CoreValueCard key={value.title} {...value} />)}
@@ -174,10 +175,10 @@ const AboutUs: React.FC = () => {
         {/* Leadership & Faculty Section */}
         <div className="bg-white py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Leadership & Faculty</h2>
+                <div className="max-w-4xl">
+                    <h2 className="text-4xl font-bold text-gray-800 mb-12">Leadership & Faculty</h2>
                 </div>
-                <div className="flex justify-center border-b border-gray-200 mb-12">
+                <div className="flex justify-start border-b border-gray-200 mb-12">
                     <button onClick={() => setActiveTab('administration')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'administration' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Administration</button>
                     <button onClick={() => setActiveTab('faculty')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'faculty' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Faculty Heads</button>
                     <button onClick={() => setActiveTab('staff')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'staff' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Staff</button>
