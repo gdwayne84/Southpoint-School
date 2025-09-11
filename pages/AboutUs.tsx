@@ -90,10 +90,10 @@ const AboutUs: React.FC = () => {
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">Our History</h2>
                         <p>
                         Southpoint School was founded in 1995 by parents who sought quality education and character formation guided by caring teachers. From the start, the school believed that the crucial years from early childhood to the teenage stage should reinforce the values of family and community.
-                        </p>
+                        </p><br />
                         <p>
                         Built on the core values of character, intelligence, and leadership, Southpoint prepares students not only for college but also for life—helping them grow in discipline, stability, and purpose.
-                        </p>
+                        </p><br />
                         <p>
                         What began with a single Preschool class has now expanded into a complete Elementary and High School program. From a small rented space, Southpoint has grown into its own campus, welcoming students from diverse cultural and religious backgrounds across Davao City.
                         </p>
