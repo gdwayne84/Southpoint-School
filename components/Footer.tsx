@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4 tracking-wider">Southpoint School</h3>
+            <h3 className="text-xl font-bold mb-4 tracking-wider">Southpoint School, Inc.</h3>
             <p className="text-gray-400 max-w-md">
               Shaping the leaders of tomorrow through academic excellence and character formation.
             </p>
@@ -28,9 +28,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>S.E. Jayme Street, Basak, Mandaue City, 6014 Cebu</li>
-              <li>+63 (32) 346-7788</li>
-              <li>info@southpointschool.edu.ph</li>
+              <li>Eden Street, Maa, Davao City</li>
+              <li>(082) 327-8550</li>
+              <li>principal@southpointschool.edu.ph</li>
             </ul>
           </div>
         </div>
