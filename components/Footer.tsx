@@ -92,10 +92,10 @@ const Footer: React.FC = () => {
           <div>
              <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
              <div className="flex space-x-4">
-                <a href="https://www.facebook.com/southpointschooldavao" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/southpointschooldavao" target="_blank" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors duration-300">
                     <FacebookIcon />
                 </a>
-                 <a href="https://www.youtube.com/@southpointschool3594" aria-label="YouTube" className="text-gray-300 hover:text-white transition-colors duration-300">
+                 <a href="https://www.youtube.com/@southpointschool3594" target="_blank" aria-label="YouTube" className="text-gray-300 hover:text-white transition-colors duration-300">
                     <YouTubeIcon />
                 </a>
              </div>
