@@ -51,7 +51,7 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between h-20">
             <div className="flex-shrink-0">
             <NavLink to="/" className="flex items-center gap-3">
-              <img src="https://www.southpointschool.edu.ph/images/logo.jpg" alt="Southpoint School Logo" className="h-12 w-auto" />
+              <img src="images/spslogo.png" alt="Southpoint School Logo" className="h-12 w-auto" />
             </NavLink>
             </div>
             <nav className="hidden md:block">
