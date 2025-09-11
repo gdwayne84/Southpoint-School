@@ -62,9 +62,9 @@ const AboutUs: React.FC = () => {
     const renderStaffGrid = (category: StaffCategory) => {
         const staffList = staff[category];
         const gridClasses = {
-            administration: 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-4xl',
-            faculty: 'grid-cols-1 sm:grid-cols-2 md:grid-cols-4 max-w-6xl',
-            staff: 'grid-cols-1 sm:grid-cols-2 max-w-xl',
+            administration: 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3',
+            faculty: 'grid-cols-1 sm:grid-cols-2 md:grid-cols-4',
+            staff: 'grid-cols-1 sm:grid-cols-2',
         };
 
         return (
@@ -80,27 +80,25 @@ const AboutUs: React.FC = () => {
         {/* Section 1: Our Story */}
         <div className="bg-gray-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                 <div className="max-w-4xl mb-16">
+                <div className="max-w-4xl mb-12">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-battle-green mb-10">Our School</h1>
-                    <p className="text-xl text-gray-600">Discover the history, mission, vision, and values that define the Southpoint School experience.</p>
+                    <p className="text-xl text-gray-600">Discover the history, philosophy, and values that define the Southpoint experience.</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div className="order-2 md:order-1 prose prose-lg max-w-none text-gray-700">
+
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="prose prose-lg max-w-none text-gray-700">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">Our History</h2>
                         <p>
-                        The school was established in 1995 by parents of bright and capable students who desired quality education and character formation, rendered by teachers with pastoral gifts.
+                        Southpoint School was founded in 1995 by parents who sought quality education and character formation guided by caring teachers. From the start, the school believed that the crucial years from early childhood to the teenage stage should reinforce the values of family and community.
                         </p>
                         <p>
-                        The founders, faculty and staff were of the conviction that early childhood through teens are the crucial years when the values of parents and their spiritual community, need to be reinforced by the school, where a student spends most of his active hours.
+                        Built on the core values of character, intelligence, and leadership, Southpoint prepares students not only for college but also for life—helping them grow in discipline, stability, and purpose.
                         </p>
                         <p>
-                        They believed that the three most important values are character, intelligence and leadership. For a student to enter college and prepare for his/her chosen profession, he/she needs to be academically disciplined, emotionally stable, founded on strong values, and able to lead him/herself before becoming a person of influence. It is for this reason that Southpoint School was founded – to prepare students for college, but also in some way, to prepare them for life.
-                        </p>
-                        <p>
-                        On its first year of operation, it offered only the Preschool level. Over the years, the school has grown and expanded to include complete Elementary and High School levels with more and more enrollees coming in every year. From its first rented campus, the school has gone on to build its present facility to accommodate its ever-growing clientele consisting not only of church members but of children from various cultural and religious backgrounds.
+                        What began with a single Preschool class has now expanded into a complete Elementary and High School program. From a small rented space, Southpoint has grown into its own campus, welcoming students from diverse cultural and religious backgrounds across Davao City.
                         </p>
                     </div>
-                    <div className="order-1 md:order-2">
+                    <div>
                         <img
                             src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2686&auto=format&fit=crop"
                             alt="Southpoint School campus with students"
@@ -183,7 +181,7 @@ const AboutUs: React.FC = () => {
                     <button onClick={() => setActiveTab('faculty')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'faculty' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Faculty Heads</button>
                     <button onClick={() => setActiveTab('staff')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'staff' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Staff</button>
                 </div>
-                <div>
+                <div className="flex justify-start">
                    {renderStaffGrid(activeTab)}
                 </div>
             </div>
