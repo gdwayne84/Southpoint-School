@@ -160,6 +160,12 @@ const testimonials = [
         img: "https://lh3.googleusercontent.com/a-/ALV-UjWsPoRD66ZuR-Q0bSd8VkOhJT1LnoYoiZsSIMUoHqE0UYiJEZWt=w72-h72-p-rp-mo-br100"
     },
     {
+        quote: "“Good teachers, good students, and a great environment overall. Honestly, it’s one of the best private schools around (besides ADDU), and you can really feel the difference here.”",
+        name: "Spoopy B",
+        role: "Former Parent",
+        img: "https://lh3.googleusercontent.com/a-/ALV-UjVsl0GJx1VAuFBas-uyKT1COlZh715Fw5QCz9VZNqfAhWXbe6IL=w144-h144-p-rp-mo-br100"
+    },
+    {
         quote: "An educational institution that molds students into compassionate, servant-hearted leaders. Southpoint builds both character and competence.",
         name: "Clasyl Nellas",
         role: "Former Teacher",
@@ -258,7 +264,7 @@ const Home: React.FC = () => {
                 <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Explore Our Programs</h2>
                 <p className="mt-4 text-xl text-gray-600">From the first steps in preschool to the final years of senior high, we offer a complete and enriching educational journey.</p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-16 h-[400px]">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-16 h-[720px] md:h-[400px]">
                 <ProgramCard title="Preschool" img="images/spsrandom17.jpg" link="/academics#preschool" />
                 <ProgramCard title="Grade School" img="images/spsrandom22.jpg" link="/academics#grade-school" />
                 <ProgramCard title="Junior High" img="images/spsrandom1.jpg" link="/academics#junior-high" />
