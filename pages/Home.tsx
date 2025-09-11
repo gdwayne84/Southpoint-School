@@ -278,23 +278,24 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-       <section className="relative bg-battle-green py-20 bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756ded668?q=80&w=2670&auto=format&fit=crop')"}}>
-        <div className="absolute inset-0 bg-battle-green/80"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h2 className="text-4xl sm:text-5xl font-extrabold">Ready to Begin Your Journey?</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-green-100">
-                Take the next step. Schedule a visit to experience our vibrant campus or contact us today.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Link to="/admissions" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
-                    Enroll Now
-                </Link>
-                <Link to="/contact" className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 w-full sm:w-auto">
-                  Contact Us
-                </Link>
-            </div>
-        </div>
-      </section>
+      <section className="relative bg-black py-20 bg-cover bg-center" style={{backgroundImage: "url('/images/spsrandom8.jpg')" }}>
+       <div className="absolute inset-0 bg-battle-green/80"></div>
+       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+           <h2 className="text-4xl sm:text-5xl font-extrabold">Ready to Begin Your Journey?</h2>
+           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-200">
+               Take the next step. Schedule a visit to experience our vibrant campus or contact us today.
+           </p>
+           <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+               <Link to="/admissions" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
+                   Enroll Now
+               </Link>
+               <Link to="/contact" className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 w-full sm:w-auto">
+                     Contact Us
+               </Link>
+           </div>
+       </div>
+     </section>
+
     </div>
   );
 };
