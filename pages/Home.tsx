@@ -259,10 +259,10 @@ const Home: React.FC = () => {
                 <p className="mt-4 text-xl text-gray-600">From the first steps in preschool to the final years of senior high, we offer a complete and enriching educational journey.</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-16 h-[400px]">
-                <ProgramCard title="Preschool" img="images/spsrandom17" link="/academics#preschool" />
-                <ProgramCard title="Grade School" img="images/spsrandom22" link="/academics#grade-school" />
-                <ProgramCard title="Junior High" img="images/spsrandom1" link="/academics#junior-high" />
-                <ProgramCard title="Senior High" img="images/students-outside-gym" link="/academics#senior-high" />
+                <ProgramCard title="Preschool" img="images/spsrandom17.jpg" link="/academics#preschool" />
+                <ProgramCard title="Grade School" img="images/spsrandom22.jpg" link="/academics#grade-school" />
+                <ProgramCard title="Junior High" img="images/spsrandom1.jpg" link="/academics#junior-high" />
+                <ProgramCard title="Senior High" img="images/students-outside-gym.jpeg" link="/academics#senior-high" />
             </div>
         </div>
       </section>
