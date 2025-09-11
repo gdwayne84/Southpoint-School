@@ -81,7 +81,7 @@ const AboutUs: React.FC = () => {
         <div className="bg-gray-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
                  <div className="max-w-4xl mb-16">
-                    <h1 className="text-4xl sm:text-5xl font-extrabold text-battle-green mb-4">Our School</h1>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-battle-green mb-10">Our School</h1>
                     <p className="text-xl text-gray-600">Discover the history, philosophy, and values that define the Southpoint experience.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
