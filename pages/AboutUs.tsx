@@ -82,7 +82,7 @@ const AboutUs: React.FC = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="max-w-4xl mb-12">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-battle-green mb-10">Our School</h1>
-                    <p className="text-xl text-gray-600">Discover the history, philosophy, and values that define the Southpoint experience.</p>
+                    <p className="text-xl text-gray-600">Discover the history, mission, vision, and values that define the Southpoint experience.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -100,8 +100,8 @@ const AboutUs: React.FC = () => {
                     </div>
                     <div>
                         <img
-                            src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2686&auto=format&fit=crop"
-                            alt="Southpoint School campus with students"
+                            src="https://lh3.googleusercontent.com/p/AF1QipOCk2d9ogkPhs8B76GuHJ3nLOzklDr5YHOx2iOj=s1360-w1360-h1020-rw"
+                            alt="Old Southpoint School building"
                             className="w-full h-auto object-cover rounded-xl shadow-2xl"
                         />
                     </div>
