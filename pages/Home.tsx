@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 
 const carouselImages = [
     {
-        src: 'https://images.unsplash.com/photo-1681567012382-89ef28797e8b?q=80&w=2070&auto=format&fit=crop',
-        alt: 'Happy graduates tossing their caps in the air'
+        src: 'images/girl ict lab.jpeg',
+        alt: 'a girl raising hand in ict lab'
     },
     {
-        src: 'https://images.unsplash.com/photo-1641395312870-5913789014cd?q=80&w=2070&auto=format&fit=crop',
-        alt: 'Engaged students listening to a lecture in a modern classroom'
+        src: 'images/students gym2.jpeg',
+        alt: 'students in the gym together'
     },
     {
-        src: 'https://images.unsplash.com/photo-1642475668457-0cb6c801c988?q=80&w=2026&auto=format&fit=crop',
-        alt: 'A diverse team of students collaborating around a table'
+        src: 'images/boy classroom.jpeg',
+        alt: 'a boy raising hand in a classroom'
     }
 ];
 
