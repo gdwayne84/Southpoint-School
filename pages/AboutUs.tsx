@@ -100,13 +100,44 @@ const AboutUs: React.FC = () => {
                         </p>
                     </div>
                     <div className="order-1 md:order-2">
-                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2686&auto=format&fit=crop" alt="Beautiful modern school campus" className="rounded-xl shadow-2xl w-full h-auto object-cover"/>
+                        <img
+                            src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2686&auto=format&fit=crop"
+                            alt="Southpoint School campus with students"
+                            className="w-full h-auto object-cover rounded-xl shadow-2xl"
+                        />
                     </div>
                 </div>
             </div>
         </div>
 
-        {/* Section 2: Vision & Mission */}
+        {/* School Video Section */}
+        <div className="bg-white py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+                A Glimpse Into Our School
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div
+                className="relative w-full overflow-hidden rounded-xl shadow-2xl"
+                style={{ paddingTop: "56.25%" }} // keeps 16:9 aspect ratio
+              >
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/P025xCP5tIA"
+                  title="Southpoint School Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Vision & Mission Section */}
         <div className="bg-white py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                  <div className="grid md:grid-cols-2 gap-12">
@@ -128,7 +159,7 @@ const AboutUs: React.FC = () => {
             </div>
         </div>
 
-        {/* Section 3: Core Values */}
+        {/* Core Values Section */}
         <div className="bg-green-50 py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto">
@@ -140,7 +171,7 @@ const AboutUs: React.FC = () => {
             </div>
         </div>
 
-        {/* Section 4: Leadership & Faculty */}
+        {/* Leadership & Faculty Section */}
         <div className="bg-white py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto">
