@@ -12,10 +12,12 @@ import ContactUs from './pages/ContactUs';
 import NotFound from './pages/NotFound';
 import Gallery from './pages/Gallery';
 import Calendar from './pages/Calendar';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   return (
     <HashRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans">
         <Header />
         <main className="flex-grow">
