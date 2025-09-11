@@ -148,22 +148,22 @@ const ProgramCard: React.FC<{ title: string; img: string; link: string; }> = ({ 
 
 const testimonials = [
     {
-        quote: "Southpoint didn't just teach my daughter academics; it taught her confidence and compassion. The teachers genuinely care, and we've seen her blossom here.",
-        name: "Jennifer P.",
-        role: "Parent",
-        img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&auto=format&fit=crop"
+        quote: "Southpoint School is a great place for growth! It has transformed not just students but also teachers—academically, professionally, and personally.",
+        name: "Eunice Grace",
+        role: "Former Teacher",
+        img: "https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-1/539050564_1798150097758394_744049408729123558_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEhxzjQ5cwFu4TEZiFEfco7NDsGwuk7T8A0OwbC6TtPwJO2nl0X3xZO5ccOnRNe_tFS6rekzv9Zd56l0-cEa_X5&_nc_ohc=L80UzF1ES8UQ7kNvwEd0g6u&_nc_oc=Adk8163u_8G0bNmjWVKdiuHr6-h0TZ5e16a_JnhbhgMjRN6TXKdCGr5aFXJ61RWjxIWq7QPCCVhyqyjxGFoBGB4T&_nc_zt=24&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=uklQl1YIOOdBm4KvONvqNg&oh=00_Afb9aZTNoJf4hrJUGxrQnPdXz5GEeFp28oab9xzqjifZYw&oe=68C85AE9"
     },
     {
-        quote: "The skills and friendships I gained at Southpoint were the perfect foundation for university and my career. I felt prepared for every challenge that came my way.",
-        name: "Michael B.",
-        role: "Alumnus, Class of 2018",
-        img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=400&h=400&auto=format&fit=crop"
+        quote: "Excellent teachers, staff, and students—I truly miss the meditation time! Southpoint has such a calm, relaxing environment. It’s a place that nurtures both the mind and heart.",
+        name: "Samantha Alexis Gok-ong",
+        role: "Former Student",
+        img: "https://lh3.googleusercontent.com/a-/ALV-UjWsPoRD66ZuR-Q0bSd8VkOhJT1LnoYoiZsSIMUoHqE0UYiJEZWt=w72-h72-p-rp-mo-br100"
     },
     {
-        quote: "As an educator, I'm proud to be part of a community that prioritizes not just academic rigor, but also the emotional and social well-being of every student.",
-        name: "Ms. Chloe Nguyen",
-        role: "Faculty",
-        img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&h=400&auto=format&fit=crop"
+        quote: "An educational institution that molds students into compassionate, servant-hearted leaders. Southpoint builds both character and competence.",
+        name: "Clasyl Nellas",
+        role: "Former Teacher",
+        img: "https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-1/398761976_7472648496083475_8939608431710742451_n.jpg?stp=cp0_dst-jpg_s80x80_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFzoHWp8jhSNaHalcnilkLu18yckGRgiOzXzJyQZGCI7HrVV3zuHJCj8gkWIp1s2VgDgMolaWbyDe1AtOWP1N3H&_nc_ohc=YSjkgWyuWhkQ7kNvwFRaWtA&_nc_oc=Adkcn9WXPnjB4RffjNZqL6wqPb6EtQ7E-fjZXiP5dKMZBAoeDXTi2NZa3u8ue_kHsNXd99bN24ZYA4OIt_NsfY4A&_nc_zt=24&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=lwjUlok_U7v-W2hQynVJiw&oh=00_AfZX8U8Thuh034wGBYMqHjBZvoEIB4xM7gWUAGIvHYb3_g&oe=68C83FCD"
     }
 ];
 
@@ -283,14 +283,14 @@ const Home: React.FC = () => {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
             <h2 className="text-4xl sm:text-5xl font-extrabold">Ready to Begin Your Journey?</h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-green-100">
-                Take the next step. Schedule a visit to experience our vibrant campus or start your application today.
+                Take the next step. Schedule a visit to experience our vibrant campus or contact us today.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Link to="/contact" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
-                    Schedule a Visit
+                <Link to="/admissions" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
+                    Enroll Now
                 </Link>
-                <Link to="/admissions" className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 w-full sm:w-auto">
-                    Apply Now
+                <Link to="/contact" className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 w-full sm:w-auto">
+                  Contact Us
                 </Link>
             </div>
         </div>
