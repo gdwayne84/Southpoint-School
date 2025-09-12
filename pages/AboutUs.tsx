@@ -3,19 +3,26 @@ import PageShell from '../components/PageShell';
 
 const staff = {
     administration: [
-        { name: 'Dr. Evelyn Reed', title: 'School President', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&h=400&auto=format&fit=crop' },
-        { name: 'Mr. Marcus Cole', title: 'School Principal', img: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=400&h=400&auto=format&fit=crop' },
-        { name: 'Ms. Isabella Garcia', title: 'Academic Coordinator', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&auto=format&fit=crop' },
+        { name: 'Hernani Jesse L. Abrigo, MBA', title: 'School Administrator', img: 'images/abrigo_jesse.jpg' },
+        { name: 'Cherryl S. Abrigo, MA', title: 'Curriculum Development Head', img: 'images/abrigo_cherryl.jpg' },
+        { name: 'Judith C. Bacarro, Ed.D.', title: 'School Principal', img: 'images/bacarro.jpg' },
+        { name: 'Margie A. Paragas, LPT', title: 'School Registrar', img: 'images/paragas.jpg' },
+        { name: 'Jozelle T. Abrigo', title: 'Guidance Officer', img: 'images/abrigo_jetz.jpg' },
+        { name: 'Gary Dwayne A. Demecillo', title: 'Systems Administrator', img: 'images/demecillo_dwayne.jpg' },
+        { name: 'Adora C. Abunales', title: 'Clinic In-Charge', img: 'images/abunalesjpg' },
+        { name: 'Sixto L. Paragas', title: 'Finance Personnel/Property Custodian', img: 'images/paragas_sixto.jpg' },
+        { name: 'Honey Mae P. Donaire', title: 'Cashier', img: 'images/donaire.jpg' },
     ],
     faculty: [
-        { name: 'Dr. Anita Sharma', title: 'Head of Science Dept.', img: 'https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=400&h=400&auto=format&fit=crop' },
-        { name: 'Mr. Ben Carter', title: 'Head of Math Dept.', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&auto=format&fit=crop' },
-        { name: 'Ms. Chloe Nguyen', title: 'Head of English Dept.', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&h=400&auto=format&fit=crop' },
-        { name: 'Mr. Liam O\'Connell', title: 'Head of Social Studies', img: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=400&h=400&auto=format&fit=crop' },
+        { name: 'Rea Grace L. Demecillo', title: 'Senior High School Coordinator', img: 'images/demecillo_rea.jpg'' },
+        { name: 'Evelyn B. Medrano, MAST', title: 'Junior High School Coordinator', img: 'images/medrano.jpg'' },
+        { name: 'Noeme S. Hanggam, LPT', title: 'Middle School Coordinator', img: 'images/hanggam.jpg'' },
+        { name: 'Amelita B. Quimpo, LPT', title: 'Lower School Coordinator', img: 'images/quimpo.jpg'' },
+        { name: 'Margie A. Paragas, LPT', title: 'Preschool Coordinator', img: 'images/paragas.jpg' },
     ],
     staff: [
-        { name: 'Mr. Kenji Tanaka', title: 'Registrar', img: 'https://images.unsplash.com/photo-1528892952291-009c663ce843?q=80&w=400&h=400&auto=format&fit=crop' },
-        { name: 'Ms. Fatima Al-Jamil', title: 'Guidance Counselor', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&h=400&auto=format&fit=crop' },
+        { name: 'Eleazar M. Panogalinog', title: 'Production Department Head', img: 'images/panogalinog.jpg' },
+        { name: 'Alvin S. Aduana', title: 'General Services Department Head', img: 'images/aduana.jpg' },
     ]
 }
 
@@ -178,7 +185,7 @@ const AboutUs: React.FC = () => {
                 </div>
                 <div className="flex justify-start border-b border-gray-200 mb-12">
                     <button onClick={() => setActiveTab('administration')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'administration' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Administration</button>
-                    <button onClick={() => setActiveTab('faculty')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'faculty' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Faculty Heads</button>
+                    <button onClick={() => setActiveTab('faculty')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'faculty' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Department Heads</button>
                     <button onClick={() => setActiveTab('staff')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'staff' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Staff</button>
                 </div>
                 <div className="flex justify-start">
