@@ -100,7 +100,7 @@ const AboutUs: React.FC = () => {
                     </div>
                     <div>
                         <img
-                            src="https://lh3.googleusercontent.com/p/AF1QipOCk2d9ogkPhs8B76GuHJ3nLOzklDr5YHOx2iOj=s1360-w1360-h1020-rw"
+                            src="images/old-sps-bldg.png"
                             alt="Old Southpoint School building"
                             className="w-full h-auto object-cover rounded-xl shadow-2xl"
                         />
