@@ -43,7 +43,7 @@ const HeroCarousel = () => {
         ))}
       </div>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2" style="z-index: 100;">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2" style={{ zIndex: 100 }}>
         {carouselImages.map((_, index) => (
           <button
             key={index}
