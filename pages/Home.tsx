@@ -71,7 +71,7 @@ const Hero = () => (
                         <span className="text-green-300">A Place to Grow.</span>
                     </h1>
                     <p className="mt-6 max-w-xl mx-auto md:mx-0 text-lg sm:text-xl text-green-100">
-                    At Southpoint School, we don’t just teach;we inspire, mentor, and shape every student to become the best version of themselves.
+                    At Southpoint School, we don’t just teach — we inspire, mentor, and guide every student to become the best version of themselves.
                     </p>
                     <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
                         <Link to="/admissions" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
