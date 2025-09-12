@@ -7,12 +7,12 @@ const carouselImages = [
         alt: 'a girl raising hand in ict lab'
     },
     {
-        src: 'images/students-gym2.jpeg',
-        alt: 'students in the gym together'
+        src: 'images/boy-classroom.jpeg',
+        alt: 'boy student smiling classroom high school'
     },
     {
-        src: 'images/spsrandom31.jpg',
-        alt: 'grade school students dancing buwan ng wika'
+        src: 'images/students-gym2.jpeg',
+        alt: 'students posing gymnasium smiling'
     }
 ];
 
