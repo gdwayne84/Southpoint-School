@@ -264,9 +264,10 @@ const Home: React.FC = () => {
                 <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Explore Our Programs</h2>
                 <p className="mt-4 text-xl text-gray-600">From the first steps in preschool to the final years of senior high, we offer a complete and enriching educational journey.</p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-16 h-[720px] md:h-[400px]">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 mt-16 h-[720px] md:h-[400px]">
                 <ProgramCard title="Preschool" img="images/spsrandom17.jpg" link="/academics#preschool" />
-                <ProgramCard title="Grade School" img="images/spsrandom22.jpg" link="/academics#grade-school" />
+                <ProgramCard title="Lower School" img="images/spsrandom22.jpg" link="/academics#lower-school" />
+                <ProgramCard title="Middle School" img="images/spsrandom19.jpg" link="/academics#middle-school" />
                 <ProgramCard title="Junior High" img="images/spsrandom1.jpg" link="/academics#junior-high" />
                 <ProgramCard title="Senior High" img="images/students-outside-gym.jpeg" link="/academics#senior-high" />
             </div>
