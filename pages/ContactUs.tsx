@@ -40,21 +40,27 @@ const ContactUs: React.FC = () => {
                         <LocationIcon />
                         <div className="ml-4">
                             <h4 className="font-semibold">Address</h4>
-                            <p>S.E. Jayme Street, Basak, Mandaue City, 6014 Cebu, Philippines</p>
+                            <p>Eden Street, Maa, Davao City, Philippines</p>
                         </div>
                     </div>
                      <div className="flex items-start">
                         <PhoneIcon />
                         <div className="ml-4">
-                            <h4 className="font-semibold">Phone</h4>
-                            <p>+63 (32) 346-788</p>
+                            <h4 className="font-semibold">Contact Numbers</h4>
+                            <p><strong>Finance Office:</strong></p>
+                            <p>(082) 327-8550</p>
+                            <p>Look for Honey Mae</p>
+                            <p><strong>Registrar's Office:</strong></p>
+                            <p>(0917) 128 3489</p>
+                            <p>Look for Teacher Margie</p>
+                            
                         </div>
                     </div>
                     <div className="flex items-start">
                         <EmailIcon />
                         <div className="ml-4">
                             <h4 className="font-semibold">Email</h4>
-                            <p>info@southpointschool.edu.ph</p>
+                            <p>principal@southpointschool.edu.ph</p>
                         </div>
                     </div>
                     <div className="flex items-start">
