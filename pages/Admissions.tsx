@@ -40,7 +40,7 @@ const Admissions: React.FC = () => {
                  <div className="bg-white p-8 rounded-lg shadow-lg">
                     <ol className="space-y-6">
                         <ProcessStep number={1} title="Inquiry" description="Parents or guardians inquire about the admission process by visiting the school, calling, or checking the website/FB Page." />
-                        <ProcessStep number={2} title="Submit Required Documents" description="Applicants may complete the enrollment form online via https://forms.gle/6nzKZb8Euz1KAiQM7 or fill it out in person at the school. Along with the form, please submit the required documents such as the birth certificate and previous report cards." />
+                        <ProcessStep number={2} title="Submit Required Documents" description={<>Applicants may complete the enrollment form <a href="https://forms.gle/6nzKZb8Euz1KAiQM7" target="_blank" rel="noopener noreferrer">online</a> or fill it out in person at the school. Along with the form, please submit the required documents such as the birth certificate and previous report cards.</>} />
                         <ProcessStep number={3} title="Application Review" description="The registrar reviews submitted documents to ensure completeness and correctness." />
                         <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
                         <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
