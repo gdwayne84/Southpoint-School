@@ -6,7 +6,7 @@ const staff = {
         { name: 'Hernani Jesse L. Abrigo, MBA', title: 'School Administrator', img: 'images/abrigo_jesse.jpg' },
         { name: 'Cherryl S. Abrigo, MA', title: 'Curriculum Development Head', img: 'images/abrigo_cherryl.jpg' },
         { name: 'Judith C. Bacarro, Ed.D.', title: 'School Principal', img: 'images/bacarro.jpg' },
-        { name: 'Margie A. Paragas, LPT', title: 'School Registrar', img: 'images/paragas.jpg' },
+        { name: 'Margie A. Paragas, LPT', title: 'School Registrar', img: 'images/paragas.png' },
         { name: 'Jozelle T. Abrigo', title: 'Guidance Officer', img: 'images/abrigo_jetz.jpg' },
         { name: 'Gary Dwayne A. Demecillo', title: 'Systems Administrator', img: 'images/demecillo_dwayne.jpg' },
         { name: 'Adora C. Abunales', title: 'Clinic In-Charge', img: 'images/abunales.jpg' },
@@ -18,7 +18,7 @@ const staff = {
         { name: 'Evelyn B. Medrano, MAST', title: 'Junior High School Coordinator', img: 'images/medrano.jpg' },
         { name: 'Noeme S. Hanggam, LPT', title: 'Middle School Coordinator', img: 'images/hanggam.jpg' },
         { name: 'Amelita B. Quimpo, LPT', title: 'Lower School Coordinator', img: 'images/quimpo.jpg' },
-        { name: 'Margie A. Paragas, LPT', title: 'Preschool Coordinator', img: 'images/paragas.jpg' },
+        { name: 'Margie A. Paragas, LPT', title: 'Preschool Coordinator', img: 'images/paragas.png' },
     ],
     staff: [
         { name: 'Eleazar M. Panogalinog', title: 'Production Department Head', img: 'images/panogalinog.jpg' },
