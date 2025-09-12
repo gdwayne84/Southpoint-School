@@ -43,7 +43,7 @@ const HeroCarousel = () => {
         ))}
       </div>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2" style="z-index: 100;">
         {carouselImages.map((_, index) => (
           <button
             key={index}
@@ -66,12 +66,12 @@ const Hero = () => (
             <div className="grid md:grid-cols-2 items-center gap-8 py-20 md:py-32">
                 <div className="relative z-10 text-center md:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-lg">
-                        More Than a School.
+                        Educating for Excellence.
                         <br />
-                        <span className="text-green-300">A Place to Grow.</span>
+                        <span className="text-green-300">Inspiring for Life.</span>
                     </h1>
                     <p className="mt-6 max-w-xl mx-auto md:mx-0 text-lg sm:text-xl text-green-100">
-                    At Southpoint School, we don’t just teach — we inspire, mentor, and guide every student to become the best version of themselves.
+                    More than academics, we mentor and guide every student to grow in values, leadership, and lifelong learning.
                     </p>
                     <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
                         <Link to="/admissions" className="bg-white hover:bg-gray-200 text-battle-green font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto">
@@ -264,7 +264,7 @@ const Home: React.FC = () => {
                 <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Explore Our Programs</h2>
                 <p className="mt-4 text-xl text-gray-600">From the first steps in preschool to the final years of senior high, we offer a complete and enriching educational journey.</p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 mt-16 h-[720px] md:h-[400px]">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 mt-16 h-[1200px] md:h-[400px]">
                 <ProgramCard title="Preschool" img="images/spsrandom17.jpg" link="/academics#preschool" />
                 <ProgramCard title="Lower School" img="images/spsrandom22.jpg" link="/academics#lower-school" />
                 <ProgramCard title="Middle School" img="images/spsrandom19.jpg" link="/academics#middle-school" />

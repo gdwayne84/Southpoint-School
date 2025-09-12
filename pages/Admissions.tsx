@@ -8,7 +8,7 @@ const ChecklistIcon = () => (
     </svg>
 );
 
-const ProcessStep: React.FC<{ number: number; title: string; description: string }> = ({ number, title, description }) => (
+const ProcessStep: React.FC<{ number: number; title: string; description: string | React.ReactNode }> = ({ number, title, description }) => (
     <li className="flex">
         <div className="flex-shrink-0">
             <span className="flex items-center justify-center h-10 w-10 rounded-full bg-battle-green text-white font-bold text-lg">
@@ -40,11 +40,11 @@ const Admissions: React.FC = () => {
                  <div className="bg-white p-8 rounded-lg shadow-lg">
                     <ol className="space-y-6">
                         <ProcessStep number={1} title="Inquiry" description="Parents or guardians inquire about the admission process by visiting the school, calling, or checking the website/FB Page." />
-                        <ProcessStep number={2} title="Submit Required Documents" description={<>Applicants may complete the enrollment form <a href="https://forms.gle/6nzKZb8Euz1KAiQM7" target="_blank" rel="noopener noreferrer" style={{ color: '#14532d', textDecoration: 'underline' }}>online</a> or fill it out in person at the school. Along with the form, please submit the required documents such as the birth certificate and previous report cards.</>} />
+                        <ProcessStep number={2} title="Submit Required Documents" description={<>Applicants may complete the enrollment form <a href="https://forms.gle/6nzKZb8Euz1KAiQM7" target="_blank" rel="noopener noreferrer" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}>online</a> or fill it out in person at the school. Along with the form, please submit the required documents such as the birth certificate and previous report cards.</>} />
                         <ProcessStep number={3} title="Application Review" description="The registrar reviews submitted documents to ensure completeness and correctness." />
                         <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
                         <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
-                        <ProcessStep number={6} title="Payment of Fees" description="Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan." />
+                        <ProcessStep number={6} title="Payment of Fees" description={<>Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan. You may also refer to the <a href="#fees" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}> schedule of fees below</a> for details from Preschool to Senior High School.</> } />
                         <ProcessStep number={7} title="Enrollment Confirmation" description="The school confirms the student's enrollment once payment is completed." />
                         <ProcessStep number={8} title="Class Assignment & Schedule" description="The student is officially enrolled and is assigned to a class with a provided schedule." />
                     </ol>
@@ -108,7 +108,7 @@ const Admissions: React.FC = () => {
             </div>
 
             {/* Tuition and Fees Section */}
-            <div>
+            <div id="fees" className="scroll-mt-24">
                 <h2 className="text-3xl font-bold text-gray-800 mb-8">Schedule of Fees</h2>
                 <div className="mb-6">
                     <label htmlFor="level-select" className="block text-lg font-medium text-gray-700 mb-2">Select Grade Level:</label>
