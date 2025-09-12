@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageShell from '../components/PageShell';
 
 const LocationIcon = () => (
@@ -24,6 +24,14 @@ const ClockIcon = () => (
 );
 
 const ContactUs: React.FC = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const recipientEmail = 'principal@southpointschool.edu.ph';
+  const subject = `Message from ${name}`;
+  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + `\n\nFrom: ${name}\nEmail: ${email}`)}`;
+
   return (
     <PageShell title="Contact Us">
         <div className="max-w-4xl">
@@ -47,13 +55,14 @@ const ContactUs: React.FC = () => {
                         <PhoneIcon />
                         <div className="ml-4">
                             <h4 className="font-semibold">Contact Numbers</h4>
-                            <p><strong>Finance Office:</strong></p>
-                            <p>(082) 327-8550</p>
-                            <p>Look for Honey Mae</p>
-                            <p><strong>Registrar's Office:</strong></p>
-                            <p>(0917) 128 3489</p>
-                            <p>Look for Teacher Margie</p>
-                            
+                            <div className="mt-2">
+                                <p className="font-medium">Finance Office:</p>
+                                <p>(082) 327-8550 (Look for Honey Mae)</p>
+                            </div>
+                            <div className="mt-3">
+                                <p className="font-medium">Registrar's Office:</p>
+                                <p>(0917) 128 3489 (Look for Teacher Margie)</p>
+                            </div>
                         </div>
                     </div>
                     <div className="flex items-start">
@@ -74,28 +83,53 @@ const ContactUs: React.FC = () => {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-lg">
-                <form>
+                <div>
                     <h3 className="text-3xl font-bold text-battle-green mb-6">Send us a Message</h3>
                     <div className="space-y-6">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
-                            <input type="text" id="name" className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-600 focus:border-green-600" placeholder="John Doe" />
+                            <input
+                                type="text"
+                                id="name"
+                                className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-600 focus:border-green-600"
+                                placeholder="John Doe"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
                         </div>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
-                            <input type="email" id="email" className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-600 focus:border-green-600" placeholder="you@example.com" />
+                            <input
+                                type="email"
+                                id="email"
+                                className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-600 focus:border-green-600"
+                                placeholder="you@example.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                         </div>
                         <div>
                             <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" rows={5} className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-600 focus:border-green-600" placeholder="Your message here..."></textarea>
+                            <textarea
+                                id="message"
+                                rows={5}
+                                className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-600 focus:border-green-600"
+                                placeholder="Your message here..."
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                            ></textarea>
                         </div>
                         <div>
-                            <button type="submit" className="w-full bg-battle-green text-white py-3 px-4 rounded-md hover:bg-green-700 font-semibold transition-colors duration-300 text-lg shadow-md hover:shadow-lg">
+                            <a
+                                href={(name && email && message) ? mailtoLink : undefined}
+                                onClick={(e) => { if (!name || !email || !message) e.preventDefault(); }}
+                                className={`w-full block text-center bg-battle-green text-white py-3 px-4 rounded-md font-semibold transition-colors duration-300 text-lg shadow-md ${name && email && message ? 'hover:bg-green-700 hover:shadow-lg' : 'opacity-50 cursor-not-allowed'}`}
+                            >
                                 Submit Message
-                            </button>
+                            </a>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
 
