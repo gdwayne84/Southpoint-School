@@ -27,16 +27,16 @@ const Admissions: React.FC = () => {
     const selectedSchedule = FEE_SCHEDULES.find(s => s.id === selectedLevelId);
 
     return (
-        <PageShell title="Enrollment and Admissions for S.Y. 2025-2026">
+        <PageShell title="Admissions">
             <div className="max-w-4xl">
                 <p className="mb-12 text-xl text-gray-600">
-                    Welcome! We are excited that you are considering joining the Southpoint family. Please follow the steps and prepare the requirements below to begin your journey with us.
+                    Welcome to Southpoint School! Enrollment and Admissions for S.Y. 2025–2026 are now open. We’re excited that you’re considering becoming part of our family. To begin your journey with us, please review the steps and prepare the requirements outlined below.
                 </p>
             </div>
 
             {/* Admission and Enrolment Flowchart Section */}
             <div className="mb-16">
-                 <h2 className="text-3xl font-bold text-gray-800 mb-8">Admission & Enrolment Flowchart</h2>
+                 <h2 className="text-3xl font-bold text-gray-800 mb-8">Admission & Enrollment Flowchart</h2>
                  <div className="bg-white p-8 rounded-lg shadow-lg">
                     <ol className="space-y-6">
                         <ProcessStep number={1} title="Inquiry" description="Parents or guardians inquire about the admission process by visiting the school, calling, or checking the website/FB Page." />
@@ -45,7 +45,7 @@ const Admissions: React.FC = () => {
                         <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
                         <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
                         <ProcessStep number={6} title="Payment of Fees" description="Upon acceptance, parents proceed with the payment of enrolment fees, either in full or through an installment plan." />
-                        <ProcessStep number={7} title="Enrolment Confirmation" description="The school confirms the student's enrolment once payment is completed." />
+                        <ProcessStep number={7} title="Enrollment Confirmation" description="The school confirms the student's enrolment once payment is completed." />
                         <ProcessStep number={8} title="Class Assignment & Schedule" description="The student is officially enrolled and is assigned to a class with a provided schedule." />
                     </ol>
                  </div>
