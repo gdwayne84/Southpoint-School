@@ -3,9 +3,23 @@ import PageShell from '../components/PageShell';
 import { FEE_SCHEDULES } from '../constants';
 
 const ChecklistIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
     </svg>
+);
+
+const ProcessStep: React.FC<{ number: number; title: string; description: string }> = ({ number, title, description }) => (
+    <li className="flex">
+        <div className="flex-shrink-0">
+            <span className="flex items-center justify-center h-10 w-10 rounded-full bg-battle-green text-white font-bold text-lg">
+                {number}
+            </span>
+        </div>
+        <div className="ml-4">
+            <h4 className="text-lg font-semibold text-gray-900">{title}</h4>
+            <p className="mt-1 text-gray-600">{description}</p>
+        </div>
+    </li>
 );
 
 const Admissions: React.FC = () => {
@@ -13,59 +27,83 @@ const Admissions: React.FC = () => {
     const selectedSchedule = FEE_SCHEDULES.find(s => s.id === selectedLevelId);
 
     return (
-        <PageShell title="Admissions">
+        <PageShell title="Enrollment and Admissions for S.Y. 2025-2026">
             <div className="max-w-4xl">
                 <p className="mb-12 text-xl text-gray-600">
-                    Follow these three simple steps to become part of the Southpoint community. We look forward to welcoming you.
+                    Welcome! We are excited that you are considering joining the Southpoint family. Please follow the steps and prepare the requirements below to begin your journey with us.
                 </p>
             </div>
 
-            {/* Admission Process Section */}
+            {/* Admission and Enrolment Flowchart Section */}
             <div className="mb-16">
-                <div className="grid md:grid-cols-3 gap-8">
-                    <div className="flex flex-col p-6 bg-white rounded-lg shadow-md border-t-4 border-battle-green">
-                        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-battle-green text-white text-xl font-bold mb-4">1</div>
-                        <h3 className="text-xl font-bold text-battle-green mb-2">Submit Application</h3>
-                        <p className="text-gray-600">Complete the online application form and upload all required documents through our admissions portal. Ensure all information is accurate and complete to avoid delays.</p>
-                    </div>
-                    <div className="flex flex-col p-6 bg-white rounded-lg shadow-md border-t-4 border-battle-green">
-                        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-battle-green text-white text-xl font-bold mb-4">2</div>
-                        <h3 className="text-xl font-bold text-battle-green mb-2">Assessment & Interview</h3>
-                        <p className="text-gray-600">Applicants will be scheduled for an entrance examination to gauge their academic preparedness, followed by a friendly interview with our admissions officer.</p>
-                    </div>
-                    <div className="flex flex-col p-6 bg-white rounded-lg shadow-md border-t-4 border-battle-green">
-                        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-battle-green text-white text-xl font-bold mb-4">3</div>
-                        <h3 className="text-xl font-bold text-battle-green mb-2">Enrollment</h3>
-                        <p className="text-gray-600">Once accepted, you will receive an offer letter. Complete the enrollment process by settling the necessary fees and submitting final documents to secure your slot.</p>
-                    </div>
-                </div>
+                 <h2 className="text-3xl font-bold text-gray-800 mb-8">Admission & Enrolment Flowchart</h2>
+                 <div className="bg-white p-8 rounded-lg shadow-lg">
+                    <ol className="space-y-6">
+                        <ProcessStep number={1} title="Inquiry" description="Parents or guardians inquire about the admission process by visiting the school, calling, or checking the website/FB Page." />
+                        <ProcessStep number={2} title="Submit Required Documents" description="Applicants submit necessary documents such as the enrolment form, birth certificate, and previous report cards." />
+                        <ProcessStep number={3} title="Application Review" description="The registrar reviews submitted documents to ensure completeness and correctness." />
+                        <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
+                        <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
+                        <ProcessStep number={6} title="Payment of Fees" description="Upon acceptance, parents proceed with the payment of enrolment fees, either in full or through an installment plan." />
+                        <ProcessStep number={7} title="Enrolment Confirmation" description="The school confirms the student's enrolment once payment is completed." />
+                        <ProcessStep number={8} title="Class Assignment & Schedule" description="The student is officially enrolled and is assigned to a class with a provided schedule." />
+                    </ol>
+                 </div>
             </div>
 
              {/* Admission Requirements Section */}
             <div className="mb-16">
                 <h2 className="text-3xl font-bold text-gray-800 mb-8">Admission Requirements</h2>
-                <div className="grid md:grid-cols-2 gap-8">
-                    <div className="bg-white p-8 rounded-lg shadow-md">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4">For New Students</h3>
-                        <ul className="list-disc list-inside space-y-2 text-gray-700">
-                            <li>Original and photocopy of PSA Birth Certificate</li>
-                            <li>Original and photocopy of Baptismal Certificate</li>
-                            <li>2x2 recent colored photos with white background (2 copies)</li>
-                            <li>Original Report Card (Form 138) with eligible for transfer status</li>
-                            <li>Certificate of Good Moral Character from previous school</li>
-                            <li>Accomplished Recommendation Form</li>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-bold text-battle-green mb-4">New or Beginning Students</h3>
+                        <ul className="space-y-2 text-gray-700">
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Result of the Entrance Test</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">PEPT Placement Test Result</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Form 138 (Report Card)</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Certificate of Good Moral Character</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Letter of Recommendation (for JHS, SHS)</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Interview</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Health Record</span></li>
                         </ul>
                     </div>
-                    <div className="bg-white p-8 rounded-lg shadow-md">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4">For Foreign Students</h3>
-                        <ul className="list-disc list-inside space-y-2 text-gray-700">
-                            <li>All requirements for new students (if applicable)</li>
-                            <li>Photocopy of Alien Certificate of Registration (ACR I-Card)</li>
-                            <li>Photocopy of student's passport (bio-page and visa page)</li>
-                            <li>Study Permit issued by the Bureau of Immigration</li>
-                            <li>Authenticated school records from the country of origin</li>
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-bold text-battle-green mb-4">Transferees</h3>
+                        <ul className="space-y-2 text-gray-700">
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Entrance Test Result</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Form 138 (Report Card)</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Transfer Credentials</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Interview</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Certificate of Good Moral Character/Transfer</span></li>
                         </ul>
                     </div>
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-bold text-battle-green mb-4">Foreign Students</h3>
+                        <p className="font-semibold text-red-600 bg-red-100 p-2 rounded-md mb-4">Temporarily no admission</p>
+                        <ul className="space-y-2 text-gray-700">
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Entrance Test Result</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Original Transcript of Records</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Personal Data</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Affidavit of Support</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Alien Certificate of Registration</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Student Visa</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+             {/* Enrollment Policy Highlights Section */}
+            <div className="mb-16">
+                <h2 className="text-3xl font-bold text-gray-800 mb-8">Enrollment Policy Highlights</h2>
+                <div className="bg-green-50 p-8 rounded-lg border-l-4 border-green-500">
+                    <ul className="list-disc list-inside space-y-3 text-gray-700">
+                        <li>Enrollment at Southpoint School is for the <strong>entire school year</strong> and is on a <strong>first-come, first-served basis</strong>.</li>
+                        <li>An <strong>enrollment fee of Php 5,000.00</strong> is required upon enrollment, with the remaining balance payable in nine (9) equal monthly amortizations.</li>
+                        <li>A <strong>3% discount on tuition</strong> is offered for full payment of the school year's fees if paid by May 15 of the current year.</li>
+                        <li><strong>Family Discounts:</strong> A 5% discount is available for the third sibling enrolled, and an 8% discount for succeeding siblings.</li>
+                         <li><strong>Academic Scholars:</strong> Discounts are available for top-ranking high school students (Rank 1: 100%, Rank 2: 50%, Rank 3: 25%).</li>
+                        <li>Withdrawal from enrollment requires written notification to the Principal or Registrar to avoid being charged for the entire school year.</li>
+                    </ul>
                 </div>
             </div>
 
