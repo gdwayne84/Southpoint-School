@@ -82,7 +82,7 @@ const ContactUs: React.FC = () => {
 
             <div className="bg-white p-8 rounded-lg shadow-lg">
                 <h3 className="text-3xl font-bold text-battle-green mb-6">Send us a Message</h3>
-                <form action="https://formsubmit.co/principal@southpointschool.edu.ph" method="POST" className="space-y-6">
+                <form action="https://formsubmit.co/dwayne@southpointschool.edu.ph" method="POST" className="space-y-6">
                     {/* Hidden fields for configuration */}
                     <input type="hidden" name="_subject" value="New Inquiry from the Southpoint School Website" />
                     <input type="hidden" name="_autoresponse" value="Thank you for your message! We have received your inquiry and will get back to you as soon as possible." />
