@@ -169,17 +169,9 @@ export const CALENDAR_EVENTS: CalendarEvent[] = [
   { date: '2026-04-10', title: 'Releasing of Report Card', category: 'Event' },
 
   // Philippine National Holidays 2025-2026
-  { date: '2025-01-01', title: 'New Year’s Day', category: 'Holiday' },
-  { date: '2025-04-09', title: 'Araw ng Kagitingan (Day of Valor)', category: 'Holiday' },
-  { date: '2025-04-17', title: 'Maundy Thursday', category: 'Holiday' },
-  { date: '2025-04-18', title: 'Good Friday', category: 'Holiday' },
-  { date: '2025-05-01', title: 'Labor Day', category: 'Holiday' },
   { date: '2025-06-06', title: 'Eid’l Adha', category: 'Holiday' },
   { date: '2025-06-12', title: 'Independence Day', category: 'Holiday' },
-  { date: '2025-08-25', title: 'National Heroes Day', category: 'Holiday' },
   { date: '2025-11-30', title: 'Bonifacio Day', category: 'Holiday' },
-  { date: '2025-12-25', title: 'Christmas Day', category: 'Holiday' },
-  { date: '2025-12-30', title: 'Rizal Day', category: 'Holiday' },
 ];
 
 export const FEE_SCHEDULES: FeeSchedule[] = [
