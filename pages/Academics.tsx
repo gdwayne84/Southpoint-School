@@ -44,7 +44,7 @@ const Academics: React.FC = () => {
         <AcademicLevel
           id="lower-school"
           title="Lower School (Grades 1-3)"
-          description="Our Grade School program builds on the strong foundations of Preschool, focusing on core subjects like English, Math, Science, and Filipino while integrating values education and co-curricular activities for holistic growth. In these early years, we lay the groundwork for academic success through multi-sensory teaching and active learning, supporting all types of learners. Students sharpen their thinking skills, strengthen literacy and numeracy, and engage in creative tasks that develop confidence and curiosity."
+          description="Our Lower School program builds on the strong foundations of Preschool, focusing on core subjects like English, Math, Science, and Filipino while integrating values education and co-curricular activities for holistic growth. In these early years, we lay the groundwork for academic success through multi-sensory teaching and active learning, supporting all types of learners. Students sharpen their thinking skills, strengthen literacy and numeracy, and engage in creative tasks that develop confidence and curiosity."
           imageUrl="images/spsrandom4.jpg"
           reverse={true}
         />

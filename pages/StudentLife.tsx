@@ -22,23 +22,23 @@ const StudentLife: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-8">
         <ActivityCard
             title="Athletics"
-            description="Our sports program promotes physical fitness, sportsmanship, and teamwork. Students can join various varsity teams, including basketball, volleyball, and soccer, and compete in inter-school leagues."
-            imageUrl="https://images.unsplash.com/photo-1575052814080-384362c3f3a9?q=80&w=2670&auto=format&fit=crop"
+            description="Our athletics program builds more than strength and skill—it cultivates teamwork, discipline, and sportsmanship. Students can take part in soccer, basketball, volleyball, and badminton, representing Southpoint in friendly matches and inter-school competitions."
+            imageUrl="images/spsrandom33.jpg"
         />
         <ActivityCard
-            title="Clubs and Organizations"
-            description="From the Science Club to the Glee Club, there's a place for every student to pursue their passion. Our student-led organizations provide platforms for leadership development and community engagement."
-            imageUrl="https://images.unsplash.com/photo-1531482615713-2c657710065d?q=80&w=2670&auto=format&fit=crop"
+            title="Arts"
+            description="Through performing arts, visual arts, media arts, and the Glee Club, students are given the freedom to express creativity and imagination. A highlight of the year is our major school production, where students showcase their talents on stage in beloved classics such as Matilda the Musical, Encanto, Hairspray, and Moana. Whether on stage, canvas, or in song, the arts program nurtures talent, confidence, and a lifelong love for culture and self-expression."
+            imageUrl="images/spsrandom32.jpg"
         />
         <ActivityCard
-            title="Annual Events"
-            description="The school year is marked by memorable events such as the Foundation Day celebration, the Family Day, and the annual school fair. These events bring the entire Southpoint community together."
-            imageUrl="https://images.unsplash.com/photo-1511795409834-ef04bbd51622?q=80&w=2670&auto=format&fit=crop"
+            title="Student Council "
+            description="The Student Council provides opportunities for leadership, service, and responsibility. By organizing events such as Teacher’s Day, school visitations, community outreach, and leadership training, student leaders learn to inspire and create meaningful impact."
+            imageUrl="images/spsrandom34.jpg"
         />
         <ActivityCard
-            title="Community Outreach"
-            description="We believe in the value of service. Our community outreach programs encourage students to become active and compassionate citizens by participating in activities that benefit society."
-            imageUrl="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2670&auto=format&fit=crop"
+            title="Mindfulness"
+            description="At Southpoint, we value inner growth as much as academic achievement. Monthly convocations, daily prayer, meditation, and other mindfulness exercises encourage students to pause, reflect, and nurture a calm, focused, and compassionate spirit. Together, we also send love and intentions to our city and country, fostering a deeper sense of connection, gratitude, and hope for the wider community."
+            imageUrl="images/spsrandom35.jpg"
         />
       </div>
     </PageShell>
