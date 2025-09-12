@@ -34,18 +34,18 @@ const Admissions: React.FC = () => {
                 </p>
             </div>
 
-            {/* Admission and Enrolment Flowchart Section */}
+            {/* Admission and Enrollment Flowchart Section */}
             <div className="mb-16">
                  <h2 className="text-3xl font-bold text-gray-800 mb-8">Admission & Enrollment Flowchart</h2>
                  <div className="bg-white p-8 rounded-lg shadow-lg">
                     <ol className="space-y-6">
                         <ProcessStep number={1} title="Inquiry" description="Parents or guardians inquire about the admission process by visiting the school, calling, or checking the website/FB Page." />
-                        <ProcessStep number={2} title="Submit Required Documents" description="Applicants submit necessary documents such as the enrolment form, birth certificate, and previous report cards." />
+                        <ProcessStep number={2} title="Submit Required Documents" description="Applicants may complete the enrollment form online via https://forms.gle/6nzKZb8Euz1KAiQM7 or fill it out in person at the school. Along with the form, please submit the required documents such as the birth certificate and previous report cards." />
                         <ProcessStep number={3} title="Application Review" description="The registrar reviews submitted documents to ensure completeness and correctness." />
                         <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
                         <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
-                        <ProcessStep number={6} title="Payment of Fees" description="Upon acceptance, parents proceed with the payment of enrolment fees, either in full or through an installment plan." />
-                        <ProcessStep number={7} title="Enrollment Confirmation" description="The school confirms the student's enrolment once payment is completed." />
+                        <ProcessStep number={6} title="Payment of Fees" description="Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan." />
+                        <ProcessStep number={7} title="Enrollment Confirmation" description="The school confirms the student's enrollment once payment is completed." />
                         <ProcessStep number={8} title="Class Assignment & Schedule" description="The student is officially enrolled and is assigned to a class with a provided schedule." />
                     </ol>
                  </div>
