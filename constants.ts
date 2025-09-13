@@ -24,24 +24,24 @@ export const NAV_LINKS: NavLinkInfo[] = [
 
 export const RESOURCE_FILES: ResourceFile[] = [
   {
-    name: 'Student Handbook 2024-2025',
+    name: 'Student Handbook 2025-2026',
     description: 'The official handbook covering school policies, code of conduct, and academic guidelines.',
-    url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    url: 'docs/Student-Handbook-s2024.pdf',
   },
   {
-    name: 'School Calendar 2024-2025',
+    name: 'School Calendar 2025-2026',
     description: 'Key dates for the academic year, including holidays, examination periods, and school events.',
-    url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    url: 'docs/School-Calendar-2025-2026.pdf',
   },
   {
-    name: 'Enrollment Form',
+    name: 'Enrollment Policy Form',
     description: 'The official form for new and returning student enrollment.',
-    url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    url: 'docs/EPA-s2025.pdf',
   },
   {
-    name: 'Medical Information Form',
-    description: 'A required form for detailing student medical history and emergency contact information.',
-    url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    name: "Learner's Medical History Form",
+    description: "A required form for detailing student medical history and emergency contact information.",
+    url: "docs/Learner-Medical-History-Form.pdf",
   },
 ];
 
