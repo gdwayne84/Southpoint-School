@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import PageShell from '../components/PageShell';
 import { FEE_SCHEDULES } from '../constants';
 
@@ -26,6 +26,19 @@ const ProcessStep: React.FC<{ number: number; title: string; description: string
 const Admissions: React.FC = () => {
     const [selectedLevelId, setSelectedLevelId] = useState(FEE_SCHEDULES[0].id);
     const selectedSchedule = FEE_SCHEDULES.find(s => s.id === selectedLevelId);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.substring(1); // remove the '#'
+            setTimeout(() => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 0);
+        }
+    }, [location]);
 
     return (
         <PageShell title="Admissions">
