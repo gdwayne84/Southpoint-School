@@ -37,8 +37,8 @@ const Academics: React.FC = () => {
       <div className="space-y-16">
         <AcademicLevel
           id="preschool"
-          title="Preschool (Nursery, Kinder 1 & 2)"
-          description="Our Preschool and Kindergarten program provides a nurturing, play-based environment where every child is at the heart of learning—curious, imaginative, and eager to explore. Through developmentally appropriate activities, we foster social, emotional, and cognitive growth while building strong foundations in literacy and numeracy. By learning through discovery, children gain the skills, confidence, and love for learning that prepare them for lifelong success."
+          title="Preschool (Pre-K1, Pre-K2, and Kindergarten))"
+          description="Our Preschool program provides a nurturing, play-based environment where every child is at the heart of learning—curious, imaginative, and eager to explore. Through developmentally appropriate activities, we foster social, emotional, and cognitive growth while building strong foundations in literacy and numeracy. By learning through discovery, children gain the skills, confidence, and love for learning that prepare them for lifelong success."
           imageUrl="images/spsrandom6.jpg"
         />
         <AcademicLevel
