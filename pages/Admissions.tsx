@@ -73,7 +73,6 @@ const Admissions: React.FC = () => {
                         <h3 className="text-xl font-bold text-battle-green mb-4">New or Beginning Students</h3>
                         <ul className="space-y-2 text-gray-700">
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Result of the Entrance Test</span></li>
-                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">PEPT Placement Test Result</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">School Form 9 (Report Card)</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Certificate of Good Moral Character</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Letter of Recommendation (for JHS, SHS)</span></li>
