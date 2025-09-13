@@ -27,7 +27,7 @@ const StudentLife: React.FC = () => {
         />
         <ActivityCard
             title="Arts"
-            description="Through performing arts, visual arts, media arts, and the Glee Club, students are given the freedom to express creativity and imagination. A highlight of the year is our major school production, where students showcase their talents on stage in beloved classics such as Matilda the Musical, Encanto, Hairspray, and Moana. Whether on stage, canvas, or in song, the arts program nurtures talent, confidence, and a lifelong love for culture and self-expression."
+            description="Through performing arts, visual arts, and media arts, students are given the freedom to express creativity and imagination. A highlight of the year is our major school production, where students showcase their talents on stage in beloved classics such as Matilda the Musical, Encanto, Hairspray, and Moana. Whether on stage, canvas, or in song, the arts program nurtures talent, confidence, and a lifelong love for culture and self-expression."
             imageUrl="images/spsrandom32.jpg"
         />
         <ActivityCard

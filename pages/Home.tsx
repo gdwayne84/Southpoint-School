@@ -133,8 +133,8 @@ const DifferenceCard: React.FC<{ title: string; description: string; icon: React
     </div>
 );
 
-const ProgramCard: React.FC<{ title: string; img: string; link: string; }> = ({ title, img, link }) => (
-    <Link to={link} className="group relative block rounded-2xl overflow-hidden shadow-lg h-full">
+const ProgramCard: React.FC<{ title: string; img: string; link: string; className?: string; }> = ({ title, img, link, className = '' }) => (
+    <Link to={link} className={`group relative block rounded-2xl overflow-hidden shadow-lg h-80 ${className}`}>
         <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
         <div className="absolute bottom-0 left-0 p-6">
@@ -264,12 +264,12 @@ const Home: React.FC = () => {
                 <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Explore Our Programs</h2>
                 <p className="mt-4 text-xl text-gray-600">From the first steps in preschool to the final years of senior high, we offer a complete and enriching educational journey.</p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 mt-16 h-[1200px] md:h-[400px]">
-                <ProgramCard title="Preschool" img="images/spsrandom17.jpg" link="/academics#preschool" />
-                <ProgramCard title="Lower School" img="images/spsrandom22.jpg" link="/academics#lower-school" />
-                <ProgramCard title="Middle School" img="images/spsrandom19.jpg" link="/academics#middle-school" />
-                <ProgramCard title="Junior High" img="images/spsrandom1.jpg" link="/academics#junior-high" />
-                <ProgramCard title="Senior High" img="images/students-outside-gym.jpeg" link="/academics#senior-high" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 mt-16">
+                <ProgramCard title="Preschool" img="images/spsrandom17.jpg" link="/academics#preschool" className="lg:col-span-3" />
+                <ProgramCard title="Lower School" img="images/spsrandom22.jpg" link="/academics#lower-school" className="lg:col-span-3" />
+                <ProgramCard title="Middle School" img="images/spsrandom19.jpg" link="/academics#middle-school" className="lg:col-span-2" />
+                <ProgramCard title="Junior High" img="images/spsrandom1.jpg" link="/academics#junior-high" className="lg:col-span-2" />
+                <ProgramCard title="Senior High" img="images/students-outside-gym.jpeg" link="/academics#senior-high" className="lg:col-span-2" />
             </div>
         </div>
       </section>
