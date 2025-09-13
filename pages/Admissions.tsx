@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PageShell from '../components/PageShell';
 import { FEE_SCHEDULES } from '../constants';
 
@@ -44,7 +45,7 @@ const Admissions: React.FC = () => {
                         <ProcessStep number={3} title="Application Review" description="The registrar reviews submitted documents to ensure completeness and correctness." />
                         <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
                         <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
-                        <ProcessStep number={6} title="Payment of Fees" description={<>Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan. You may also refer to the <a href="#fees" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}> schedule of fees below</a> for details from Preschool to Senior High School.</> } />
+                        <ProcessStep number={6} title="Payment of Fees" description={<>Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan. You may also refer to the <Link to="#fees" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}> schedule of fees below</Link> for details from Preschool to Senior High School.</> } />
                         <ProcessStep number={7} title="Enrollment Confirmation" description="The school confirms the student's enrollment once payment is completed." />
                         <ProcessStep number={8} title="Class Assignment & Schedule" description="The student is officially enrolled and is assigned to a class with a provided schedule." />
                     </ol>
