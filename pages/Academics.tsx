@@ -65,7 +65,7 @@ const Academics: React.FC = () => {
           id="senior-high"
           title="Senior High School (Grades 11-12)"
           description="Our Senior High School program equips students with the knowledge and skills they need for success in college, employment, or entrepreneurship. With a future-focused curriculum, we offer academic tracks and strands that allow students to specialize in fields aligned with their passions and career aspirations. Career guidance, real-world readiness, and rigorous preparation ensure they meet the standards of top universities while gaining confidence to pursue meaningful pathways beyond graduation."
-          imageUrl="images/boy-classroom.jpeg"
+          imageUrl="images/spsrandom49.jpg"
         />
       </div>
 
