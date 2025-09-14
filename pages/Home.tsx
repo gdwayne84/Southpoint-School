@@ -11,7 +11,7 @@ const carouselImages = [
         alt: 'boy student smiling classroom high school'
     },
     {
-        src: 'images/girls-outside-classroom.jpeg',
+        src: 'images/girl-outside-classroom.jpeg',
         alt: 'students posing outside classroom high school'
     }
 ];
@@ -266,7 +266,7 @@ const Home: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 mt-16">
                 <ProgramCard title="Preschool" img="images/spsrandom17.jpg" link="/academics#preschool" className="lg:col-span-3" />
-                <ProgramCard title="Lower School" img="images/spsrandom22.jpg" link="/academics#lower-school" className="lg:col-span-3" />
+                <ProgramCard title="Lower School" img="images/spsrandom24.jpg" link="/academics#lower-school" className="lg:col-span-3" />
                 <ProgramCard title="Middle School" img="images/spsrandom19.jpg" link="/academics#middle-school" className="lg:col-span-2" />
                 <ProgramCard title="Junior High" img="images/spsrandom1.jpg" link="/academics#junior-high" className="lg:col-span-2" />
                 <ProgramCard title="Senior High" img="images/students-outside-gym.jpeg" link="/academics#senior-high" className="lg:col-span-2" />
