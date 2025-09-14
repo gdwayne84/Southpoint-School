@@ -184,9 +184,9 @@ const AboutUs: React.FC = () => {
                     <h2 className="text-4xl font-bold text-gray-800 mb-12">Leadership & Faculty</h2>
                 </div>
                 <div className="flex justify-start border-b border-gray-200 mb-12">
-                    <button onClick={() => setActiveTab('administration')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'administration' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Administration</button>
-                    <button onClick={() => setActiveTab('faculty')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'faculty' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Department Heads</button>
-                    <button onClick={() => setActiveTab('staff')} className={`px-6 py-3 text-lg font-semibold transition-colors duration-300 ${activeTab === 'staff' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Staff</button>
+                    <button onClick={() => setActiveTab('administration')} className={`px-4 sm:px-6 py-3 text-sm sm:text-lg font-semibold transition-colors duration-300 ${activeTab === 'administration' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Administration</button>
+                    <button onClick={() => setActiveTab('faculty')} className={`px-4 sm:px-6 py-3 text-sm sm:text-lg font-semibold transition-colors duration-300 ${activeTab === 'faculty' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Department Heads</button>
+                    <button onClick={() => setActiveTab('staff')} className={`px-4 sm:px-6 py-3 text-sm sm:text-lg font-semibold transition-colors duration-300 ${activeTab === 'staff' ? 'border-b-2 border-battle-green text-battle-green' : 'text-gray-500 hover:text-gray-800'}`}>Staff</button>
                 </div>
                 <div className="flex justify-start">
                    {renderStaffGrid(activeTab)}
