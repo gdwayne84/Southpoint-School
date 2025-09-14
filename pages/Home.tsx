@@ -269,7 +269,7 @@ const Home: React.FC = () => {
                 <ProgramCard title="Lower School" img="images/spsrandom24.jpg" link="/academics#lower-school" className="lg:col-span-3" />
                 <ProgramCard title="Middle School" img="images/spsrandom37.jpg" link="/academics#middle-school" className="lg:col-span-2" />
                 <ProgramCard title="Junior High" img="images/spsrandom1.jpg" link="/academics#junior-high" className="lg:col-span-2" />
-                <ProgramCard title="Senior High" img="images/spsrandom36.jpeg" link="/academics#senior-high" className="lg:col-span-2" />
+                <ProgramCard title="Senior High" img="images/spsrandom36.jpg" link="/academics#senior-high" className="lg:col-span-2" />
             </div>
         </div>
       </section>
