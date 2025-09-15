@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                   </div>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                Shaping the leaders of tomorrow through academic excellence and character formation.
+                “Raising academically excellent Filipino servant leaders.”
               </p>
           </div>
 
