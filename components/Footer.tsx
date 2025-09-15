@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                 <a href="https://www.facebook.com/southpointschooldavao" target="_blank" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors duration-300">
                     <FacebookIcon />
                 </a>
-                 <a href="https://www.youtube.com/@southpointschool3594" aria-label="YouTube" className="text-gray-300 hover:text-white transition-colors duration-300">
+                 <a href="https://www.youtube.com/@southpointschool3594" target="_blank" aria-label="YouTube" className="text-gray-300 hover:text-white transition-colors duration-300">
                     <YoutubeIcon />
                 </a>
              </div>
