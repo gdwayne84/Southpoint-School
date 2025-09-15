@@ -242,7 +242,7 @@ const Calendar: React.FC = () => {
     return (
         <PageShell title="School Calendar">
             <p className="mb-12 text-xl max-w-4xl text-gray-600">
-                You can also download a PDF version of the school calendar from our <Link to="/parent-resources" className="text-battle-green font-semibold hover:underline">Parent Resources</Link> page.
+                You can also download a PDF version of the School Calendar from our <Link to="/parent-resources" className="text-battle-green font-semibold hover:underline">Parent Resources</Link> page.
             </p>
             <div className="bg-white p-2 sm:p-6 rounded-lg shadow-lg">
                 {renderHeader()}
