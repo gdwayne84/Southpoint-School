@@ -1,16 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import PageShell from '../components/PageShell';
 import { CALENDAR_EVENTS } from '../constants';
 import { CalendarEvent } from '../types';
 
 const ChevronLeftIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
     </svg>
 );
 
 const ChevronRightIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
     </svg>
 );
@@ -19,7 +20,6 @@ const categoryColors: { [key in CalendarEvent['category']]: { bg: string; text: 
     Holiday: { bg: 'bg-red-100', text: 'text-red-800', border: 'border-red-500' },
     Exam: { bg: 'bg-blue-100', text: 'text-blue-800', border: 'border-blue-500' },
     Event: { bg: 'bg-green-100', text: 'text-green-800', border: 'border-green-600' },
-    'No Classes': { bg: 'bg-yellow-100', text: 'text-yellow-800', border: 'border-yellow-500' },
 };
 
 const formatDate = (date: Date): string => {
@@ -29,12 +29,22 @@ const formatDate = (date: Date): string => {
 const Calendar: React.FC = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(new Date());
+    const [activeFilter, setActiveFilter] = useState<CalendarEvent['category'] | 'All'>('All');
     const eventListRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-    const eventsByDate = CALENDAR_EVENTS.reduce((acc, event) => {
-        (acc[event.date] = acc[event.date] || []).push(event);
-        return acc;
-    }, {} as { [key: string]: CalendarEvent[] });
+    const filteredEvents = useMemo(() => {
+        if (activeFilter === 'All') {
+            return CALENDAR_EVENTS;
+        }
+        return CALENDAR_EVENTS.filter(event => event.category === activeFilter);
+    }, [activeFilter]);
+
+    const eventsByDate = useMemo(() => {
+        return filteredEvents.reduce((acc, event) => {
+            (acc[event.date] = acc[event.date] || []).push(event);
+            return acc;
+        }, {} as { [key: string]: CalendarEvent[] });
+    }, [filteredEvents]);
 
     useEffect(() => {
         const selectedDateStr = formatDate(selectedDate);
@@ -142,7 +152,7 @@ const Calendar: React.FC = () => {
     };
 
     const renderLegend = () => (
-      <div className="mt-8 flex flex-wrap justify-center items-center gap-y-3 gap-x-4 sm:gap-x-6">
+      <div className="mt-6 flex flex-wrap justify-center items-center gap-y-3 gap-x-4 sm:gap-x-6">
         {Object.entries(categoryColors).map(([category, colors]) => (
           <div key={category} className="flex items-center">
             <span className={`w-4 h-4 rounded-full mr-2 ${colors.bg.replace('-100', '-500')}`}></span>
@@ -152,8 +162,25 @@ const Calendar: React.FC = () => {
       </div>
     );
 
+    const renderFilters = () => {
+        const filters: (CalendarEvent['category'] | 'All')[] = ['All', 'Holiday', 'Exam', 'Event'];
+        return (
+            <div className="mt-8 flex flex-wrap justify-center gap-2 sm:gap-3">
+                {filters.map(filter => (
+                    <button
+                        key={filter}
+                        onClick={() => setActiveFilter(filter)}
+                        className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${activeFilter === filter ? 'bg-battle-green text-white shadow' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+                    >
+                        {filter}
+                    </button>
+                ))}
+            </div>
+        );
+    };
+
     const renderMonthlyEvents = () => {
-        const eventsThisMonth = CALENDAR_EVENTS
+        const eventsThisMonth = filteredEvents
             .filter(event => new Date(event.date).getMonth() === currentDate.getMonth() && new Date(event.date).getFullYear() === currentDate.getFullYear())
             .sort((a, b) => new Date(a.date).getDate() - new Date(b.date).getDate());
 
@@ -166,16 +193,22 @@ const Calendar: React.FC = () => {
 
         if (Object.keys(groupedEvents).length === 0) {
             return (
-                 <div className="mt-12 text-center">
-                    <h3 className="text-2xl font-bold text-gray-800">No Events This Month</h3>
-                    <p className="text-gray-500 mt-2">Check back later or select another month.</p>
+                 <div className="mt-12 text-center py-8 bg-gray-50 rounded-lg">
+                    <h3 className="text-2xl font-bold text-gray-800">
+                      {activeFilter === 'All' ? 'No Events This Month' : `No ${activeFilter}s This Month`}
+                    </h3>
+                    <p className="text-gray-500 mt-2">
+                      {activeFilter === 'All' ? 'Check back later or select another month.' : `Try selecting another category or month.`}
+                    </p>
                 </div>
             )
         }
 
         return (
-            <div className="mt-12">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">Events This Month</h3>
+            <div className="mt-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                  {activeFilter === 'All' ? 'Events This Month' : `${activeFilter}s This Month`}
+                </h3>
                 <div className="space-y-4">
                     {Object.entries(groupedEvents).map(([date, events]) => {
                         const day = new Date(date);
@@ -208,6 +241,9 @@ const Calendar: React.FC = () => {
 
     return (
         <PageShell title="School Calendar">
+            <p className="mb-12 text-xl max-w-4xl text-gray-600">
+                You can also download a PDF version of the school calendar from our <Link to="/parent-resources" className="text-battle-green font-semibold hover:underline">Parent Resources</Link> page.
+            </p>
             <div className="bg-white p-2 sm:p-6 rounded-lg shadow-lg">
                 {renderHeader()}
                 <div className="border border-gray-200 divide-y divide-gray-200">
@@ -215,6 +251,7 @@ const Calendar: React.FC = () => {
                     {renderCells()}
                 </div>
             </div>
+            {renderFilters()}
             {renderLegend()}
             <div className="mt-10 border-t border-gray-200 pt-8">
                 {renderMonthlyEvents()}
