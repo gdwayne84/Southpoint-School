@@ -54,10 +54,11 @@ export const FOOTER_LINKS: FooterLink[] = [
 
 export const CALENDAR_EVENTS: CalendarEvent[] = [
   // June 2025
-  { date: '2025-06-16', title: 'Students’ Orientation (Half Day)', category: 'Event' },
-  { date: '2025-06-22', title: 'Parents’ Orientation', category: 'Event' },
+  { date: '2025-06-06', title: 'Eid\'l Adha', category: 'Holiday' },
+  { date: '2025-06-12', title: 'Independence Day', category: 'Holiday' },
+  { date: '2025-06-16', title: 'Students\' Orientation (Half Day)', category: 'Event' },
+  { date: '2025-06-22', title: 'Parents\' Orientation', category: 'Event' },
   { date: '2025-06-23', title: 'Regular Classes Begin', category: 'Event' },
-
   // July 2025
   { date: '2025-07-04', title: 'Convocation Day', category: 'Event' },
   { date: '2025-07-04', title: 'SC Filing of Candidacy', category: 'Event' },
@@ -72,16 +73,15 @@ export const CALENDAR_EVENTS: CalendarEvent[] = [
   { date: '2025-07-29', title: 'Nutrition Week', category: 'Event' },
   { date: '2025-07-30', title: 'Nutrition Week', category: 'Event' },
   { date: '2025-07-31', title: 'Nutrition Week', category: 'Event' },
-
   // August 2025
   { date: '2025-08-01', title: 'Convocation Day', category: 'Event' },
   { date: '2025-08-19', title: 'First Periodic Test', category: 'Exam' },
   { date: '2025-08-20', title: 'First Periodic Test', category: 'Exam' },
-  { date: '2025-08-21', title: 'Ninoy Aquino Day', category: 'Holiday' },            // National Holiday
+  { date: '2025-08-21', title: 'First Periodic Test', category: 'Exam' },
+  { date: '2025-08-21', title: 'Ninoy Aquino Day', category: 'Holiday' },
   { date: '2025-08-22', title: 'First Periodic Test', category: 'Exam' },
-  { date: '2025-08-25', title: 'National Heroes Day', category: 'Holiday' },          // National Holiday
+  { date: '2025-08-25', title: 'National Heroes Day', category: 'Holiday' },
   { date: '2025-08-29', title: 'Buwan ng Wika Culminating Activity', category: 'Event' },
-
   // September 2025
   { date: '2025-09-05', title: 'Convocation Day', category: 'Event' },
   { date: '2025-09-06', title: 'PTC & ROH (1st Grading)', category: 'Event' },
@@ -89,22 +89,21 @@ export const CALENDAR_EVENTS: CalendarEvent[] = [
   { date: '2025-09-19', title: 'Second Monthly Test', category: 'Exam' },
   { date: '2025-09-29', title: 'Environmental Awareness', category: 'Event' },
   { date: '2025-09-30', title: 'Environmental Awareness', category: 'Event' },
-
   // October 2025
-  { date: '2025-10-03', title: 'Teachers’ Day Celebration', category: 'Event' },
+  { date: '2025-10-03', title: 'Teachers\' Day Celebration', category: 'Event' },
   { date: '2025-10-10', title: 'Convocation Day', category: 'Event' },
   { date: '2025-10-22', title: 'Second Periodic Test', category: 'Exam' },
   { date: '2025-10-23', title: 'Second Periodic Test', category: 'Exam' },
   { date: '2025-10-24', title: 'Second Periodic Test', category: 'Exam' },
   { date: '2025-10-31', title: 'UN Culmination', category: 'Event' },
-  { date: '2025-10-31', title: 'All Saints’ Eve', category: 'Holiday' },
-
+  { date: '2025-10-31', title: 'All Saints\' Eve', category: 'Holiday' },
   // November 2025
-  { date: '2025-11-01', title: 'All Saints’ Day', category: 'Holiday' },
+  { date: '2025-11-01', title: 'All Saints\' Day', category: 'Holiday' },
   { date: '2025-11-04', title: 'Medical Check-up', category: 'Event' },
   { date: '2025-11-05', title: 'Medical Check-up', category: 'Event' },
   { date: '2025-11-06', title: 'Medical Check-up', category: 'Event' },
-  { date: '2025-11-07', title: 'Medical Check-up & Convocation Day', category: 'Event' },
+  { date: '2025-11-07', title: 'Medical Check-up', category: 'Event' },
+  { date: '2025-11-07', title: 'Convocation Day', category: 'Event' },
   { date: '2025-11-08', title: 'PTC & ROH (2nd Grading)', category: 'Event' },
   { date: '2025-11-10', title: 'Dental Check-up', category: 'Event' },
   { date: '2025-11-11', title: 'Dental Check-up', category: 'Event' },
@@ -115,7 +114,7 @@ export const CALENDAR_EVENTS: CalendarEvent[] = [
   { date: '2025-11-21', title: 'Third Monthly Test', category: 'Exam' },
   { date: '2025-11-27', title: '30th Founding Anniversary', category: 'Event' },
   { date: '2025-11-28', title: '30th Founding Anniversary', category: 'Event' },
-
+  { date: '2025-11-30', title: 'Bonifacio Day', category: 'Holiday' },
   // December 2025
   { date: '2025-12-08', title: 'Feast of the Immaculate Conception', category: 'Holiday' },
   { date: '2025-12-16', title: 'Third Periodic Test', category: 'Exam' },
@@ -126,9 +125,8 @@ export const CALENDAR_EVENTS: CalendarEvent[] = [
   { date: '2025-12-25', title: 'Christmas Day', category: 'Holiday' },
   { date: '2025-12-30', title: 'Rizal Day', category: 'Holiday' },
   { date: '2025-12-31', title: 'Last Day of the Year', category: 'Holiday' },
-
   // January 2026
-  { date: '2026-01-01', title: 'New Year’s Day', category: 'Holiday' },
+  { date: '2026-01-01', title: 'New Year\'s Day', category: 'Holiday' },
   { date: '2026-01-05', title: 'Classes Resume', category: 'Event' },
   { date: '2026-01-07', title: 'Pictorial', category: 'Event' },
   { date: '2026-01-08', title: 'Pictorial', category: 'Event' },
@@ -138,8 +136,8 @@ export const CALENDAR_EVENTS: CalendarEvent[] = [
   { date: '2026-01-27', title: 'Fourth Monthly Test', category: 'Exam' },
   { date: '2026-01-28', title: 'Math & Science Fair', category: 'Event' },
   { date: '2026-01-29', title: 'Math & Science Fair', category: 'Event' },
-  { date: '2026-01-30', title: 'Math & Science Fair & PS Wet Day', category: 'Event' },
-
+  { date: '2026-01-30', title: 'Math & Science Fair', category: 'Event' },
+  { date: '2026-01-30', title: 'PS Wet Day', category: 'Event' },
   // February 2026
   { date: '2026-02-06', title: 'Convocation Day', category: 'Event' },
   { date: '2026-02-06', title: 'Clearance Distribution', category: 'Event' },
@@ -150,29 +148,32 @@ export const CALENDAR_EVENTS: CalendarEvent[] = [
   { date: '2026-02-26', title: 'LitMus', category: 'Event' },
   { date: '2026-02-27', title: 'LitMus', category: 'Event' },
   { date: '2026-02-28', title: 'JS Prom', category: 'Event' },
-
   // March 2026
   { date: '2026-03-06', title: 'Career Day', category: 'Event' },
   { date: '2026-03-07', title: 'General Assembly', category: 'Event' },
   { date: '2026-03-11', title: 'Year-End Assessment Test', category: 'Exam' },
   { date: '2026-03-12', title: 'Year-End Assessment Test', category: 'Exam' },
   { date: '2026-03-13', title: 'CEM Exams', category: 'Exam' },
-  { date: '2026-03-16', title: 'Practices Begin', category: 'Event' },
-  { date: '2026-03-26', title: 'Practices End', category: 'Event' },
+  { date: '2026-03-16', title: 'Practices', category: 'Event' },
+  { date: '2026-03-17', title: 'Practices', category: 'Event' },
+  { date: '2026-03-18', title: 'Practices', category: 'Event' },
+  { date: '2026-03-19', title: 'Practices', category: 'Event' },
+  { date: '2026-03-20', title: 'Practices', category: 'Event' },
+  { date: '2026-03-21', title: 'Practices', category: 'Event' },
+  { date: '2026-03-22', title: 'Practices', category: 'Event' },
+  { date: '2026-03-23', title: 'Practices', category: 'Event' },
+  { date: '2026-03-24', title: 'Practices', category: 'Event' },
+  { date: '2026-03-25', title: 'Practices', category: 'Event' },
+  { date: '2026-03-26', title: 'Practices', category: 'Event' },
   { date: '2026-03-27', title: 'Recognition Day', category: 'Event' },
   { date: '2026-03-30', title: 'Kindergarten Moving Up (AM)', category: 'Event' },
   { date: '2026-03-30', title: 'Grade 6 Graduation (PM)', category: 'Event' },
   { date: '2026-03-31', title: 'Grade 10 Moving Up', category: 'Event' },
   { date: '2026-03-31', title: 'Grade 12 Graduation', category: 'Event' },
-
   // April 2026
   { date: '2026-04-10', title: 'Releasing of Report Card', category: 'Event' },
-
-  // Philippine National Holidays 2025-2026
-  { date: '2025-06-06', title: 'Eid’l Adha', category: 'Holiday' },
-  { date: '2025-06-12', title: 'Independence Day', category: 'Holiday' },
-  { date: '2025-11-30', title: 'Bonifacio Day', category: 'Holiday' },
 ];
+
 
 export const FEE_SCHEDULES: FeeSchedule[] = [
   {
