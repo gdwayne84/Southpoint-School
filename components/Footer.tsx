@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-start">
               <div className="mb-4">
                   <div className="bg-white p-2 rounded-xl shadow-lg inline-block">
-                      <img src="https://www.southpointschool.edu.ph/images/logo.jpg" alt="Southpoint School Logo" className="h-14 w-auto" />
+                      <img src="images/spslogo.png" alt="Southpoint School Logo" className="h-14 w-auto" />
                   </div>
               </div>
               <p className="text-gray-300 leading-relaxed">
