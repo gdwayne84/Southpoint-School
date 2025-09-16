@@ -151,7 +151,7 @@ const testimonials = [
         quote: "Southpoint School is a great place for growth! It has transformed not just students but also teachers—academically, professionally, and personally.",
         name: "Eunice Grace",
         role: "Former Teacher",
-        img: "https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-1/539050564_1798150097758394_744049408729123558_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEhxzjQ5cwFu4TEZiFEfco7NDsGwuk7T8A0OwbC6TtPwJO2nl0X3xZO5ccOnRNe_tFS6rekzv9Zd56l0-cEa_X5&_nc_ohc=L80UzF1ES8UQ7kNvwEd0g6u&_nc_oc=Adk8163u_8G0bNmjWVKdiuHr6-h0TZ5e16a_JnhbhgMjRN6TXKdCGr5aFXJ61RWjxIWq7QPCCVhyqyjxGFoBGB4T&_nc_zt=24&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=uklQl1YIOOdBm4KvONvqNg&oh=00_Afb9aZTNoJf4hrJUGxrQnPdXz5GEeFp28oab9xzqjifZYw&oe=68C85AE9"
+        img: "images/eunice.jpg"
     },
     {
         quote: "Excellent teachers, staff, and students—I truly miss the meditation time! Southpoint has such a calm, relaxing environment. It’s a place that nurtures both the mind and heart.",
@@ -169,7 +169,7 @@ const testimonials = [
         quote: "An educational institution that molds students into compassionate, servant-hearted leaders. Southpoint builds both character and competence.",
         name: "Clasyl Nellas",
         role: "Former Teacher",
-        img: "https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-1/398761976_7472648496083475_8939608431710742451_n.jpg?stp=cp0_dst-jpg_s80x80_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFzoHWp8jhSNaHalcnilkLu18yckGRgiOzXzJyQZGCI7HrVV3zuHJCj8gkWIp1s2VgDgMolaWbyDe1AtOWP1N3H&_nc_ohc=YSjkgWyuWhkQ7kNvwFRaWtA&_nc_oc=Adkcn9WXPnjB4RffjNZqL6wqPb6EtQ7E-fjZXiP5dKMZBAoeDXTi2NZa3u8ue_kHsNXd99bN24ZYA4OIt_NsfY4A&_nc_zt=24&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=lwjUlok_U7v-W2hQynVJiw&oh=00_AfZX8U8Thuh034wGBYMqHjBZvoEIB4xM7gWUAGIvHYb3_g&oe=68C83FCD"
+        img: "images/clasyl.jpg"
     }
 ];
 
