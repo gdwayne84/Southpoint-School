@@ -27,6 +27,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     setIsMenuOpen(false);
+    setOpenSubmenu(null);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -50,11 +51,11 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex-shrink-0">
-            <NavLink to="/" className="flex items-center gap-3">
-              <img src="images/spslogo.png" alt="Southpoint School Logo" className="h-12 w-auto" />
-            </NavLink>
+              <NavLink to="/" className="flex items-center gap-3">
+                <img src="https://www.southpointschool.edu.ph/images/logo.jpg" alt="Southpoint School Logo" className="h-12 w-auto" />
+              </NavLink>
             </div>
-            <nav className="hidden md:block">
+            <nav className="hidden lg:block">
               <div className="ml-10 flex items-baseline space-x-2">
                 {NAV_LINKS.map((link) => (
                   <div key={link.label} className="relative group">
@@ -97,7 +98,7 @@ const Header: React.FC = () => {
                 ))}
               </div>
             </nav>
-            <div className="-mr-2 flex md:hidden">
+            <div className="-mr-2 flex lg:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-battle-green focus:outline-none"
@@ -110,7 +111,7 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay (for screens < md) */}
       <div className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="absolute inset-0 bg-battle-green/95 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
         <div className="relative z-50 h-full w-full flex flex-col p-4">
@@ -128,7 +129,9 @@ const Header: React.FC = () => {
                     <>
                       <button onClick={() => handleSubmenuToggle(link.label)} className="text-2xl font-semibold text-gray-300 hover:text-white flex items-center justify-center w-full py-2">
                         {link.label}
-                        <ChevronDownIcon />
+                        <div className={`transition-transform duration-300 ${openSubmenu === link.label ? 'rotate-180' : ''}`}>
+                            <ChevronDownIcon />
+                        </div>
                       </button>
                       {openSubmenu === link.label && (
                         <div className="mt-2 space-y-3 bg-black/20 rounded-lg py-3">
@@ -156,6 +159,60 @@ const Header: React.FC = () => {
                   )}
                 </div>
               ))}
+            </nav>
+        </div>
+      </div>
+
+       {/* Tablet Menu Overlay (for screens >= md and < lg) */}
+       <div className={`fixed inset-0 z-40 hidden md:block lg:hidden transition-opacity duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+          <div className="absolute inset-0 bg-black/50" onClick={() => setIsMenuOpen(false)}></div>
+          <div className={`relative z-50 h-full w-96 bg-white ml-auto flex flex-col p-6 shadow-xl transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className="flex justify-between items-center mb-8">
+                <h2 className="text-2xl font-bold text-battle-green">Menu</h2>
+                <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu" className="p-2 text-gray-600 hover:text-battle-green">
+                    <CloseIcon />
+                </button>
+            </div>
+            <nav className="flex-grow">
+                <ul className="space-y-2">
+                    {NAV_LINKS.map((link) => (
+                        <li key={link.label}>
+                            {link.children ? (
+                                <>
+                                    <button onClick={() => handleSubmenuToggle(link.label)} className="w-full flex justify-between items-center py-3 px-4 rounded-lg text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-battle-green">
+                                        <span>{link.label}</span>
+                                        <div className={`transition-transform duration-300 ${openSubmenu === link.label ? 'rotate-180' : ''}`}>
+                                            <ChevronDownIcon />
+                                        </div>
+                                    </button>
+                                    {openSubmenu === link.label && (
+                                        <ul className="pl-6 mt-2 space-y-1">
+                                            {link.children.map(child => (
+                                                <li key={child.path}>
+                                                    <NavLink
+                                                        to={child.path!}
+                                                        end
+                                                        className={({ isActive }) => `block py-2 px-4 rounded-md text-md ${isActive ? 'bg-green-50 text-battle-green font-semibold' : 'text-gray-600 hover:bg-gray-100'}`}
+                                                    >
+                                                        {child.label}
+                                                    </NavLink>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </>
+                            ) : (
+                                <NavLink
+                                    to={link.path!}
+                                    end
+                                    className={({ isActive }) => `block py-3 px-4 rounded-lg text-lg font-medium transition-colors ${isActive ? 'bg-green-100 text-battle-green font-bold' : 'text-gray-700 hover:bg-gray-100 hover:text-battle-green'}`}
+                                >
+                                    {link.label}
+                                </NavLink>
+                            )}
+                        </li>
+                    ))}
+                </ul>
             </nav>
         </div>
       </div>

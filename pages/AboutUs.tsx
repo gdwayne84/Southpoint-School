@@ -69,9 +69,9 @@ const AboutUs: React.FC = () => {
     const renderStaffGrid = (category: StaffCategory) => {
         const staffList = staff[category];
         const gridClasses = {
-            administration: 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3',
-            faculty: 'grid-cols-1 sm:grid-cols-2 md:grid-cols-4',
-            staff: 'grid-cols-1 sm:grid-cols-2',
+            administration: 'grid-cols-2 md:grid-cols-3',
+            faculty: 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4',
+            staff: 'grid-cols-2 md:grid-cols-3 lg:grid-cols-2',
         };
 
         return (
