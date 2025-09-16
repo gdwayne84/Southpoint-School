@@ -45,7 +45,7 @@ const coreValues = [
 const StaffCard: React.FC<{ name: string; title: string; img: string; }> = ({ name, title, img }) => (
     <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 group text-center">
         <div className="h-64 sm:h-72">
-            <img src={img} alt={`Photo of ${name}`} className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+            <img src={img} alt={`Photo of ${name}`} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
         </div>
         <div className="p-5">
           <h4 className="font-bold text-xl text-gray-900">{name}</h4>
