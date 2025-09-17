@@ -44,7 +44,7 @@ const Admissions: React.FC = () => {
         <PageShell title="Admissions">
             <div className="max-w-4xl">
                 <p className="mb-12 text-xl text-gray-600">
-                    Welcome to Southpoint School! Enrollment and Admissions for S.Y. 2025–2026 are now open. We’re excited that you’re considering becoming part of our family. To begin your journey with us, please review the steps and prepare the requirements outlined below.
+                    Welcome to Southpoint School! Enrollment and Admissions for S.Y. 2025–2026 are open. We’re excited that you’re considering becoming part of our family. To begin your journey with us, please review the steps and prepare the requirements outlined below.
                 </p>
             </div>
 
