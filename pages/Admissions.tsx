@@ -84,7 +84,7 @@ const Admissions: React.FC = () => {
                         <h3 className="text-xl font-bold text-battle-green mb-4">Transferees</h3>
                         <ul className="space-y-2 text-gray-700">
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Entrance Test Result</span></li>
-                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Form 138 (Report Card)</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">School Form 9 (Report Card)</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Transfer Credentials</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Interview</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Certificate of Good Moral Character/Transfer</span></li>
