@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import PageShell from '../components/PageShell';
 import { FEE_SCHEDULES } from '../constants';
+import { FeeItem } from '../types';
 
 const ChecklistIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -22,6 +23,45 @@ const ProcessStep: React.FC<{ number: number; title: string; description: string
         </div>
     </li>
 );
+
+const FeeRow: React.FC<{ fee: FeeItem; index: number }> = ({ fee, index }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const hasDetails = fee.details && fee.details.length > 0;
+
+    if (fee.isSpace) return <div key={index} className="pt-4"></div>;
+
+    return (
+        <div key={index} className="border-b border-gray-100 last:border-0">
+            <div
+                className={`flex justify-between items-center py-2 ${fee.isBold ? 'font-bold text-gray-900' : 'text-gray-700'} ${hasDetails ? 'cursor-pointer hover:bg-gray-50 px-2 -mx-2 rounded transition-colors' : ''}`}
+                onClick={() => hasDetails && setIsExpanded(!isExpanded)}
+            >
+                <div className="flex items-center text-left">
+                    <span>{fee.label}</span>
+                    {hasDetails && (
+                        <svg
+                            className={`ml-2 h-4 w-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                    )}
+                </div>
+                <span className="text-right ml-4">{fee.value}</span>
+            </div>
+            {hasDetails && isExpanded && (
+                <div className="pl-4 pr-2 pb-3 pt-1 space-y-1 bg-gray-50 rounded-b-md animate-fade-in">
+                    {fee.details?.map((detail: FeeItem, dIndex: number) => (
+                        <div key={dIndex} className="flex justify-between text-sm text-gray-600 py-1 border-b border-gray-200 last:border-0">
+                            <span className="text-left">{detail.label}</span>
+                            <span className="text-right ml-4">{detail.value}</span>
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+};
 
 const Admissions: React.FC = () => {
     const [selectedLevelId, setSelectedLevelId] = useState(FEE_SCHEDULES[0].id);
@@ -44,7 +84,7 @@ const Admissions: React.FC = () => {
         <PageShell title="Admissions">
             <div className="max-w-4xl">
                 <p className="mb-12 text-xl text-gray-600">
-                    Welcome to Southpoint School! Enrollment and Admissions for S.Y. 2025–2026 are open. We’re excited that you’re considering becoming part of our family. To begin your journey with us, please review the steps and prepare the requirements outlined below.
+                    Welcome to Southpoint School! Enrollment and Admissions for S.Y. 2025–2026 are now open. We’re excited that you’re considering becoming part of our family. To begin your journey with us, please review the steps and prepare the requirements outlined below.
                 </p>
             </div>
 
@@ -58,7 +98,7 @@ const Admissions: React.FC = () => {
                         <ProcessStep number={3} title="Application Review" description="The registrar reviews submitted documents to ensure completeness and correctness." />
                         <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
                         <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
-                        <ProcessStep number={6} title="Payment of Fees" description={<>Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan, which may be settled via bank transfer or over-the-counter payment. You may also refer to the <Link to="#fees" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}> schedule of fees below</Link> for details from Preschool to Senior High School.</> } />
+                        <ProcessStep number={6} title="Payment of Fees" description={<>Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan. You may also refer to the <Link to="#fees" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}> schedule of fees below</Link> for details from Preschool to Senior High School.</> } />
                         <ProcessStep number={7} title="Enrollment Confirmation" description="The school confirms the student's enrollment once payment is completed." />
                         <ProcessStep number={8} title="Class Assignment & Schedule" description="The student is officially enrolled and is assigned to a class with a provided schedule." />
                     </ol>
@@ -73,7 +113,8 @@ const Admissions: React.FC = () => {
                         <h3 className="text-xl font-bold text-battle-green mb-4">New or Beginning Students</h3>
                         <ul className="space-y-2 text-gray-700">
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Result of the Entrance Test</span></li>
-                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">School Form 9 (Report Card)</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">PEPT Placement Test Result</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Form 138 (Report Card)</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Certificate of Good Moral Character</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Letter of Recommendation (for JHS, SHS)</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Interview</span></li>
@@ -84,7 +125,7 @@ const Admissions: React.FC = () => {
                         <h3 className="text-xl font-bold text-battle-green mb-4">Transferees</h3>
                         <ul className="space-y-2 text-gray-700">
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Entrance Test Result</span></li>
-                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">School Form 9 (Report Card)</span></li>
+                            <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Form 138 (Report Card)</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Transfer Credentials</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Interview</span></li>
                             <li className="flex items-start"><ChecklistIcon /><span className="ml-2">Certificate of Good Moral Character/Transfer</span></li>
@@ -151,12 +192,7 @@ const Admissions: React.FC = () => {
                                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Fee Breakdown</h4>
                                 <div className="space-y-2">
                                     {selectedSchedule.fees.map((fee, index) => (
-                                        fee.isSpace ?
-                                        <div key={index} className="pt-4"></div> :
-                                        <div key={index} className={`flex justify-between items-center py-1 ${fee.isBold ? 'font-bold text-gray-900' : 'text-gray-700'}`}>
-                                            <span>{fee.label}</span>
-                                            <span>{fee.value}</span>
-                                        </div>
+                                        <FeeRow key={index} fee={fee} index={index} />
                                     ))}
                                 </div>
                                 <div className="mt-6 bg-green-50 p-4 rounded-md text-green-800 text-sm border-l-4 border-green-500">

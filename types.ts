@@ -28,6 +28,7 @@ export interface FeeItem {
   value: string;
   isBold?: boolean;
   isSpace?: boolean;
+  details?: FeeItem[];
 }
 
 export interface FeeSchedule {
