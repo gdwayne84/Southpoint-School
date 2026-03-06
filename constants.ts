@@ -596,6 +596,75 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
   ],
    requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
+},
+
+{
+  id: "grade11",
+  level: "Grade 11",
+  fees: [
+    { label: "Tuition Fees", value: "₱42,597.15" },
+    {
+      label: "Miscellaneous",
+      value: "₱24,307.61",
+      details: [
+        { label: "Athletics", value: "₱1,021.00" },
+        { label: "Computer Fee (u-maint.cost)", value: "₱2,228.00" },
+        { label: "Diagnostic Test", value: "₱761.51" },
+        { label: "Energy Fee", value: "₱3,985.20" },
+        { label: "Facilities Improvements", value: "₱4,084.30" },
+        { label: "Guidance Fee", value: "₱449.90" },
+        { label: "I.D. Picture", value: "₱245.30" },
+        { label: "Instructional Materials", value: "₱3,620.00" },
+        { label: "Insurance", value: "₱123.20" },
+        { label: "Library", value: "₱929.00" },
+        { label: "Medical-Dental & Supply", value: "₱817.30" },
+        { label: "Membership Fee (AASHPI, DAPRISA)", value: "₱306.90" },
+        { label: "Registration", value: "₱2,413.00" },
+        { label: "Science Laboratory", value: "₱1,299.00" },
+        { label: "School Publication", value: "₱306.90" },
+        { label: "Student Services", value: "₱1,485.00" },
+        { label: "Class Picture", value: "₱232.10" }
+      ]
+    },
+    { label: "Total School Fees", value: "₱66,904.76", isBold: true }
+  ],
+   requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
+  discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
+},
+
+{
+  id: "grade12",
+  level: "Grade 12",
+  fees: [
+    { label: "Tuition Fees", value: "₱46,856.80" },
+    {
+      label: "Miscellaneous",
+      value: "₱27,204.00",
+      details: [
+        { label: "Athletics", value: "₱1,021.00" },
+        { label: "Computer Fee (u-maint.cost)", value: "₱2,228.00" },
+        { label: "Energy Fee", value: "₱3,985.20" },
+        { label: "Facilities Improvements", value: "₱4,084.30" },
+        { label: "Graduation", value: "₱2,200.00" },
+        { label: "Guidance Fee", value: "₱449.90" },
+        { label: "I.D. Picture", value: "₱245.30" },
+        { label: "Instructional Materials", value: "₱3,982.00" },
+        { label: "Insurance", value: "₱123.20" },
+        { label: "Library", value: "₱929.00" },
+        { label: "Medical-Dental & Supply", value: "₱817.30" },
+        { label: "Membership Fee (AASHPI, DAPRISA)", value: "₱306.90" },
+        { label: "Registration", value: "₱2,413.00" },
+        { label: "Science Laboratory", value: "₱1,299.00" },
+        { label: "School Publication", value: "₱306.90" },
+        { label: "Student Services", value: "₱1,485.00" },
+        { label: "Class Picture", value: "₱232.10" },
+        { label: "Year Book Picture", value: "₱334.40" }
+      ]
+    },
+    { label: "Total School Fees", value: "₱74,060.80", isBold: true }
+  ],
+   requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
+  discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
 }
 
 ];
