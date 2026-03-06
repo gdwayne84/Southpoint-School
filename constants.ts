@@ -440,6 +440,162 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
   ],
   requirements: ["Entrance Test (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
+},
+
+{
+  id: "grade7",
+  level: "Grade 7",
+  fees: [
+    { label: "Tuition Fees", value: "₱36,270.00" },
+    {
+      label: "Miscellaneous",
+      value: "₱30,129.44",
+      details: [
+        { label: "Athletics", value: "₱1,124.09" },
+        { label: "Computer Fee (u-maint.cost)", value: "₱2,695.88" },
+        { label: "Internet Fee", value: "₱4,083.75" },
+        { label: "Diagnostic Test", value: "₱775.61" },
+        { label: "Energy Fee", value: "₱2,042.48" },
+        { label: "Facilities Improvements", value: "₱4,083.75" },
+        { label: "Graduation", value: "₱0.00" },
+        { label: "Guidance Fee", value: "₱450.12" },
+        { label: "Home Economics", value: "₱1,483.46" },
+        { label: "I.D. Picture", value: "₱269.83" },
+        { label: "Instructional Materials", value: "₱3,982.11" },
+        { label: "Insurance", value: "₱123.75" },
+        { label: "Library", value: "₱1,018.82" },
+        { label: "Medical-Dental & Supply", value: "₱816.86" },
+        { label: "Membership Fee (AASHPI, DAPRISA)", value: "₱337.59" },
+        { label: "Registration", value: "₱2,654.74" },
+        { label: "Science Laboratory", value: "₱1,429.01" },
+        { label: "School Publication", value: "₱306.13" },
+        { label: "Scouting/Retreat/Camps", value: "₱613.47" },
+        { label: "Student Services", value: "₱1,633.50" },
+        { label: "Class Picture", value: "₱204.49" },
+        { label: "Year Book Picture", value: "₱0.00" },
+      ]
+    },
+    { label: "Total School Fees", value: "₱66,399.44", isBold: true },
+  ],
+   requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
+  discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
+},
+
+{
+  id: "grade8",
+  level: "Grade 8",
+  fees: [
+    { label: "Tuition Fees", value: "₱36,270.00" },
+    {
+      label: "Miscellaneous",
+      value: "₱30,129.44",
+      details: [
+        { label: "Athletics", value: "₱1,124.09" },
+        { label: "Computer Fee (u-maint.cost)", value: "₱2,695.88" },
+        { label: "Internet Fee", value: "₱4,083.75" },
+        { label: "Diagnostic Test", value: "₱775.61" },
+        { label: "Energy Fee", value: "₱2,042.48" },
+        { label: "Facilities Improvements", value: "₱4,083.75" },
+        { label: "Graduation", value: "₱0.00" },
+        { label: "Guidance Fee", value: "₱450.12" },
+        { label: "Home Economics", value: "₱1,483.46" },
+        { label: "I.D. Picture", value: "₱269.83" },
+        { label: "Instructional Materials", value: "₱3,982.11" },
+        { label: "Insurance", value: "₱123.75" },
+        { label: "Library", value: "₱1,018.82" },
+        { label: "Medical-Dental & Supply", value: "₱816.86" },
+        { label: "Membership Fee (AASHPI, DAPRISA)", value: "₱337.59" },
+        { label: "Registration", value: "₱2,654.74" },
+        { label: "Science Laboratory", value: "₱1,429.01" },
+        { label: "School Publication", value: "₱306.13" },
+        { label: "Scouting/Retreat/Camps", value: "₱613.47" },
+        { label: "Student Services", value: "₱1,633.50" },
+        { label: "Class Picture", value: "₱204.49" },
+        { label: "Year Book Picture", value: "₱0.00" },
+      ]
+    },
+    { label: "Total School Fees", value: "₱66,399.44", isBold: true },
+  ],
+   requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
+  discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
+},
+
+{
+  id: "grade9",
+  level: "Grade 9",
+  fees: [
+    { label: "Tuition Fees", value: "₱36,270.00" },
+    {
+      label: "Miscellaneous",
+      value: "₱30,129.44",
+      details: [
+        { label: "Athletics", value: "₱1,124.09" },
+        { label: "Computer Fee (u-maint.cost)", value: "₱2,695.88" },
+        { label: "Internet Fee", value: "₱4,083.75" },
+        { label: "Diagnostic Test", value: "₱775.61" },
+        { label: "Energy Fee", value: "₱2,042.48" },
+        { label: "Facilities Improvements", value: "₱4,083.75" },
+        { label: "Graduation", value: "₱0.00" },
+        { label: "Guidance Fee", value: "₱450.12" },
+        { label: "Home Economics", value: "₱1,483.46" },
+        { label: "I.D. Picture", value: "₱269.83" },
+        { label: "Instructional Materials", value: "₱3,982.11" },
+        { label: "Insurance", value: "₱123.75" },
+        { label: "Library", value: "₱1,018.82" },
+        { label: "Medical-Dental & Supply", value: "₱816.86" },
+        { label: "Membership Fee (AASHPI, DAPRISA)", value: "₱337.59" },
+        { label: "Registration", value: "₱2,654.74" },
+        { label: "Science Laboratory", value: "₱1,429.01" },
+        { label: "School Publication", value: "₱306.13" },
+        { label: "Scouting/Retreat/Camps", value: "₱613.47" },
+        { label: "Student Services", value: "₱1,633.50" },
+        { label: "Class Picture", value: "₱204.49" },
+        { label: "Year Book Picture", value: "₱0.00" },
+      ]
+    },
+    { label: "Total School Fees", value: "₱66,399.44", isBold: true },
+  ],
+   requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
+  discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
+},
+
+{
+  id: "grade10",
+  level: "Grade 10",
+  fees: [
+    { label: "Tuition Fees", value: "₱36,270.00" },
+    {
+      label: "Miscellaneous",
+      value: "₱32,607.96",
+      details: [
+        { label: "Athletics", value: "₱1,124.09" },
+        { label: "Computer Fee (u-maint.cost)", value: "₱2,695.88" },
+        { label: "Internet Fee", value: "₱4,083.75" },
+        { label: "Diagnostic Test", value: "₱775.61" },
+        { label: "Energy Fee", value: "₱2,042.48" },
+        { label: "Facilities Improvements", value: "₱4,083.75" },
+        { label: "Graduation", value: "₱2,144.12" },
+        { label: "Guidance Fee", value: "₱450.12" },
+        { label: "Home Economics", value: "₱1,483.46" },
+        { label: "I.D. Picture", value: "₱269.83" },
+        { label: "Instructional Materials", value: "₱3,982.11" },
+        { label: "Insurance", value: "₱123.75" },
+        { label: "Library", value: "₱1,018.82" },
+        { label: "Medical-Dental & Supply", value: "₱816.86" },
+        { label: "Membership Fee (AASHPI, DAPRISA)", value: "₱337.59" },
+        { label: "Registration", value: "₱2,654.74" },
+        { label: "Science Laboratory", value: "₱1,429.01" },
+        { label: "School Publication", value: "₱306.13" },
+        { label: "Scouting/Retreat/Camps", value: "₱613.47" },
+        { label: "Student Services", value: "₱1,633.50" },
+        { label: "Class Picture", value: "₱204.49" },
+        { label: "Year Book Picture", value: "₱334.40" },
+      ]
+    },
+    { label: "Total School Fees", value: "₱68,877.96", isBold: true },
+  ],
+   requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
+  discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
 }
 
 ];
