@@ -176,6 +176,48 @@ export const CALENDAR_EVENTS: CalendarEvent[] = [
 
 
 export const FEE_SCHEDULES: FeeSchedule[] = [
+    {
+    id: "prek",
+    level: "Pre-Kindergarten",
+    fees: [
+      { label: "Tuition Fees", value: "₱28,183.10" },
+      {
+        label: "Miscellaneous",
+        value: "₱25,485.91",
+        details: [
+          { label: "Athletics", value: "₱481.80" },
+          { label: "Energy Fee", value: "₱3,985.20" },
+          { label: "Facilities Improvements", value: "₱3,894.22" },
+          { label: "Home Room PTA", value: "₱0.00" },
+          { label: "I.D. Picture", value: "₱245.30" },
+          { label: "Instructional Materials", value: "₱4,513.85" },
+          { label: "Insurance", value: "₱112.20" },
+          { label: "Kindergarten Supplies", value: "₱5,042.29" },
+          { label: "Library", value: "₱0.00" },
+          { label: "Medical-Dental & Supply", value: "₱1,102.31" },
+          { label: "Membership Fee (Institutional)", value: "₱306.90" },
+          { label: "Registration", value: "₱2,420.00" },
+          { label: "School Publication", value: "₱754.60" },
+          { label: "Student Services", value: "₱2,464.44" },
+          { label: "Class Picture", value: "₱162.80" }
+        ]
+      },
+      { label: "Total School Fees", value: "₱53,669.01", isBold: true }
+      {
+        label: "View Enrollment Fees",
+        value: "",
+        details: [
+          { label: "Module", value: "₱3,000.00" },
+          { label: "Reading Program", value: "₱0.00" },
+          { label: "Math Textbook", value: "₱1,800.00" },
+          { label: "Upon Enrollment", value: "₱9,800.00", isBold: true },
+          { label: "Monthly Dues", value: "₱5,408.00", isBold: true },
+        ]
+      },
+    ],
+    requirements: ["Entrance Test", "PSA Birth Certificate (Photocopy)", "Fill out Enrolment Form or Online Enrolment"],
+    discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
+  },
   {
     id: "kinder",
     level: "Kinder",
@@ -209,6 +251,17 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
         ]
       },
       { label: "Total School Fees", value: "₱55,540.37", isBold: true },
+      {
+        label: "View Enrollment Fees",
+        value: "",
+        details: [
+          { label: "Module", value: "₱3,000.00" },
+          { label: "Reading Program", value: "₱2,500.00" },
+          { label: "Math Textbook", value: "₱1,800.00" },
+          { label: "Upon Enrollment", value: "₱12,300.00", isBold: true },
+          { label: "Monthly Dues", value: "₱5,616.00", isBold: true },
+        ]
+      },
     ],
     requirements: ["Entrance Test", "PSA Birth Certificate (Photocopy)", "Fill out Enrolment Form or Online Enrolment"],
     discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -246,6 +299,17 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
         ]
       },
       { label: "Total School Fees", value: "₱49,331.71", isBold: true },
+      {
+        label: "View Enrollment Fees",
+        value: "",
+        details: [
+          { label: "Module", value: "₱3,000.00" },
+          { label: "Reading Program", value: "₱2,500.00" },
+          { label: "Math Textbook", value: "₱1,800.00" },
+          { label: "Upon Enrollment", value: "₱12,300.00", isBold: true },
+          { label: "Monthly Dues", value: "₱4,926.00", isBold: true },
+        ]
+      },
     ],
     requirements: ["Entrance Test", "PSA Birth Certificate (Photocopy)", "Kindergarten – ECCD Summative Assessment", "Report Card", "Fill out Enrolment Form or Online Enrolment"],
     discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -283,6 +347,17 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
         ]
       },
       { label: "Total School Fees", value: "₱49,331.71", isBold: true },
+      {
+        label: "View Enrollment Fees",
+        value: "",
+        details: [
+          { label: "Module", value: "₱3,000.00" },
+          { label: "Reading Program", value: "₱2,500.00" },
+          { label: "Math Textbook", value: "₱1,800.00" },
+          { label: "Upon Enrollment", value: "₱12,300.00", isBold: true },
+          { label: "Monthly Dues", value: "₱4,926.00", isBold: true },
+        ]
+      },
     ],
     requirements: ["Entrance Test (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
     discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -320,6 +395,17 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
         ]
       },
       { label: "Total School Fees", value: "₱50,759.13", isBold: true },
+      {
+        label: "View Enrollment Fees",
+        value: "",
+        details: [
+          { label: "Module", value: "₱3,000.00" },
+          { label: "Reading Program", value: "₱2,500.00" },
+          { label: "Math Textbook", value: "₱1,800.00" },
+          { label: "Upon Enrollment", value: "₱12,300.00", isBold: true },
+          { label: "Monthly Dues", value: "₱5,085.00", isBold: true },
+        ]
+      },
     ],
     requirements: ["Entrance Test (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
     discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -359,6 +445,17 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱56,515.50", isBold: true },
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱2,780.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Math Textbook", value: "₱1,800.00" },
+        { label: "Upon Enrollment", value: "₱12,080.00", isBold: true },
+        { label: "Monthly Dues", value: "₱5,724.00", isBold: true },
+      ]
+    },
   ],
   requirements: ["Entrance Test (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -398,6 +495,17 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱56,441.98", isBold: true },
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱2,780.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Math Textbook", value: "₱1,800.00" },
+        { label: "Upon Enrollment", value: "₱12,080.00", isBold: true },
+        { label: "Monthly Dues", value: "₱5,716.00", isBold: true },
+      ]
+    },
   ],
   requirements: ["Entrance Test (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -437,6 +545,17 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱60,952.54", isBold: true },
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱2,780.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Math Textbook", value: "₱1,800.00" },
+        { label: "Upon Enrollment", value: "₱12,080.00", isBold: true },
+        { label: "Monthly Dues", value: "₱6,217.00", isBold: true },
+      ]
+    },
   ],
   requirements: ["Entrance Test (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -476,6 +595,16 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱66,399.44", isBold: true },
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱3,080.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Upon Enrollment", value: "₱10,580.00", isBold: true },
+        { label: "Monthly Dues", value: "₱6,823.00", isBold: true },
+      ]
+    },
   ],
    requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -515,6 +644,16 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱66,399.44", isBold: true },
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱3,080.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Upon Enrollment", value: "₱10,580.00", isBold: true },
+        { label: "Monthly Dues", value: "₱6,823.00", isBold: true },
+      ]
+    },
   ],
    requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -554,6 +693,16 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱66,399.44", isBold: true },
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱3,080.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Upon Enrollment", value: "₱10,580.00", isBold: true },
+        { label: "Monthly Dues", value: "₱6,823.00", isBold: true },
+      ]
+    },
   ],
    requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -593,6 +742,16 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱68,877.96", isBold: true },
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱3,080.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Upon Enrollment", value: "₱10,580.00", isBold: true },
+        { label: "Monthly Dues", value: "₱7,098.00", isBold: true },
+      ]
+    },
   ],
    requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -627,6 +786,16 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱66,904.76", isBold: true }
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱3,080.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Upon Enrollment", value: "₱10,580.00", isBold: true },
+        { label: "Monthly Dues", value: "₱6,879.00", isBold: true },
+      ]
+    },
   ],
    requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."
@@ -662,6 +831,16 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
       ]
     },
     { label: "Total School Fees", value: "₱74,060.80", isBold: true }
+    {
+      label: "View Enrollment Fees",
+      value: "",
+      details: [
+        { label: "Module", value: "₱3,080.00" },
+        { label: "Reading Program", value: "₱2,500.00" },
+        { label: "Upon Enrollment", value: "₱10,580.00", isBold: true },
+        { label: "Monthly Dues", value: "₱7,674.00", isBold: true },
+      ]
+    },
   ],
    requirements: ["Entrance Test (for Transferees only)", "Interview by the Principal/Coordinator (for Transferees only)", "PSA Birth Certificate (Photocopy)", "Report Card", "Good Moral Certificate (for Transferees)", "Fill out Enrolment Form or Online Enrolment"],
   discount: "A 3% discount on tuition fees is given for one-time full payment of the entire year's matriculation made on or before May 15, 2026."

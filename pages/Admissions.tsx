@@ -152,7 +152,6 @@ const Admissions: React.FC = () => {
                 <div className="bg-green-50 p-8 rounded-lg border-l-4 border-green-500">
                     <ul className="list-disc list-inside space-y-3 text-gray-700">
                         <li>Enrollment at Southpoint School is for the <strong>entire school year</strong> and is on a <strong>first-come, first-served basis</strong>.</li>
-                        <li>An <strong>enrollment fee of Php 5,000.00</strong> is required upon enrollment, with the remaining balance payable in nine (9) equal monthly amortizations.</li>
                         <li>A <strong>3% discount on tuition</strong> is offered for full payment of the school year's fees if paid by May 15 of the current year.</li>
                         <li><strong>Family Discounts:</strong> A 5% discount is available for the third sibling enrolled, and an 8% discount for succeeding siblings.</li>
                          <li><strong>Academic Scholars:</strong> Discounts are available for top-ranking high school students (Rank 1: 100%, Rank 2: 50%, Rank 3: 25%).</li>
