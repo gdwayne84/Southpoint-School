@@ -202,7 +202,7 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
           { label: "Class Picture", value: "₱162.80" }
         ]
       },
-      { label: "Total School Fees", value: "₱53,669.01", isBold: true }
+      { label: "Total School Fees", value: "₱53,669.01", isBold: true },
       {
         label: "View Enrollment Fees",
         value: "",
@@ -785,7 +785,7 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
         { label: "Class Picture", value: "₱232.10" }
       ]
     },
-    { label: "Total School Fees", value: "₱66,904.76", isBold: true }
+    { label: "Total School Fees", value: "₱66,904.76", isBold: true },
     {
       label: "View Enrollment Fees",
       value: "",
@@ -830,7 +830,7 @@ export const FEE_SCHEDULES: FeeSchedule[] = [
         { label: "Year Book Picture", value: "₱334.40" }
       ]
     },
-    { label: "Total School Fees", value: "₱74,060.80", isBold: true }
+    { label: "Total School Fees", value: "₱74,060.80", isBold: true },
     {
       label: "View Enrollment Fees",
       value: "",
