@@ -69,8 +69,9 @@ const Admissions: React.FC = () => {
     const location = useLocation();
 
     useEffect(() => {
-        if (location.hash) {
-            const id = location.hash.substring(1); // remove the '#'
+      const isFeesPath = location.pathname.endsWith('/fees');
+      if (location.hash || isFeesPath) {
+          const id = isFeesPath ? 'fees' : location.hash.substring(1);
             setTimeout(() => {
                 const element = document.getElementById(id);
                 if (element) {
@@ -97,8 +98,8 @@ const Admissions: React.FC = () => {
                         <ProcessStep number={2} title="Submit Required Documents" description={<>Applicants may complete the enrollment form <a href="https://forms.gle/6nzKZb8Euz1KAiQM7" target="_blank" rel="noopener noreferrer" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}>online</a> or fill it out in person at the school. Along with the form, please submit the required documents such as the birth certificate and previous report cards.</>} />
                         <ProcessStep number={3} title="Application Review" description="The registrar reviews submitted documents to ensure completeness and correctness." />
                         <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
-                        <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
-                        <ProcessStep number={6} title="Payment of Fees" description={<>Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan. You may also refer to the <Link to="#fees" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}> schedule of fees below</Link> for details from Preschool to Senior High School.</> } />
+                        <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />      
+                        <ProcessStep number={6} title="Payment of Fees" description={<>Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan. You may also refer to the <Link to="/admissions/fees" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}> schedule of fees below</Link> for details from Preschool to Senior High School.</> } />
                         <ProcessStep number={7} title="Enrollment Confirmation" description="The school confirms the student's enrollment once payment is completed." />
                         <ProcessStep number={8} title="Class Assignment & Schedule" description="The student is officially enrolled and is assigned to a class with a provided schedule." />
                     </ol>
