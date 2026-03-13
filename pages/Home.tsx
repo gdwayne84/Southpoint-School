@@ -63,7 +63,7 @@ const HeroCarousel = () => {
 const Hero = () => (
     <div className="relative bg-battle-green w-full text-white overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 items-center gap-8 py-20 md:py-32">
+            <div className="grid md:grid-cols-2 items-center gap-8 pt-20 pb-10 md:pt-32 md:pb-16">
                 <div className="relative z-10 text-center md:text-left">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-lg">
                         Educating for Excellence.
@@ -85,6 +85,19 @@ const Hero = () => (
                 <div className="relative min-h-[320px] md:h-auto">
                     <HeroCarousel />
                 </div>
+            </div>
+
+            {/* Full-width Enrollment Banner */}
+            <div className="mb-12 md:mb-20 bg-white rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl border-l-8 border-l-green-500">
+                <div className="text-center md:text-left">
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">
+                        Enrollment is Now Open for <span className="text-battle-green">SY 2026–2027</span>
+                    </h2>
+                    <p className="text-gray-600 mt-1 text-base md:text-lg">Join our community of excellence. Secure your spot today!</p>
+                </div>
+                <Link to="/admissions" className="bg-battle-green hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap">
+                    Enroll Now &rarr;
+                </Link>
             </div>
         </div>
     </div>
