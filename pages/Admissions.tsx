@@ -98,7 +98,7 @@ const Admissions: React.FC = () => {
                         <ProcessStep number={2} title="Submit Required Documents" description={<>Applicants may complete the enrollment form <a href="https://forms.gle/6nzKZb8Euz1KAiQM7" target="_blank" rel="noopener noreferrer" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}>online</a> or fill it out in person at the school. Along with the form, please submit the required documents such as the birth certificate and previous report cards.</>} />
                         <ProcessStep number={3} title="Application Review" description="The registrar reviews submitted documents to ensure completeness and correctness." />
                         <ProcessStep number={4} title="Interview / Assessment" description="Students may undergo an interview, entrance test, or readiness assessment, depending on the grade level." />
-                        <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />      
+                        <ProcessStep number={5} title="Receive Admission Decision" description="The school notifies the applicant of the results of the admission process." />
                         <ProcessStep number={6} title="Payment of Fees" description={<>Upon acceptance, parents proceed with the payment of enrollment fees, either in full or through an installment plan. You may also refer to the <Link to="/admissions/fees" style={{ color: '#14532d', fontWeight: 'bold', textDecoration: 'underline' }}> schedule of fees below</Link> for details from Preschool to Senior High School.</> } />
                         <ProcessStep number={7} title="Enrollment Confirmation" description="The school confirms the student's enrollment once payment is completed." />
                         <ProcessStep number={8} title="Class Assignment & Schedule" description="The student is officially enrolled and is assigned to a class with a provided schedule." />
@@ -163,7 +163,7 @@ const Admissions: React.FC = () => {
 
             {/* Tuition and Fees Section */}
             <div id="fees" className="scroll-mt-24">
-                <h2 className="text-3xl font-bold text-gray-800 mb-8">Schedule of Fees</h2>
+                <h2 className="text-3xl font-bold text-gray-800 mb-8">Schedule of Fees for SY 2026–2027</h2>
                 <div className="mb-6">
                     <label htmlFor="level-select" className="block text-lg font-medium text-gray-700 mb-2">Select Grade Level:</label>
                     <div className="relative max-w-sm">
