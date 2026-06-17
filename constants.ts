@@ -9,8 +9,13 @@ export const NAV_LINKS: NavLinkInfo[] = [
       { label: 'Gallery', path: '/gallery' },
     ]
   },
-  { label: 'Admissions', path: '/admissions' },
-  { label: 'Academics', path: '/academics' },
+  {
+    label: 'Study',
+    children: [
+      { label: 'Admissions', path: '/admissions' },
+      { label: 'Academics', path: '/academics' },
+    ]
+  },
   {
     label: 'Campus Life',
     children: [
@@ -20,6 +25,12 @@ export const NAV_LINKS: NavLinkInfo[] = [
     ]
   },
   { label: 'Contact Us', path: '/contact' },
+  {
+    label: 'Student Portal',
+    path: 'https://student-portal.southpointschool.edu.ph/',
+    isExternal: true,
+    isHighlight: true
+  }
 ];
 
 export const RESOURCE_FILES: ResourceFile[] = [

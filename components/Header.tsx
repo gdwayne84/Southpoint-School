@@ -27,7 +27,6 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     setIsMenuOpen(false);
-    setOpenSubmenu(null);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -52,14 +51,36 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between h-20">
             <div className="flex-shrink-0">
               <NavLink to="/" className="flex items-center gap-3">
-                <img src="images/spslogo.png" alt="Southpoint School Logo" className="h-12 w-auto" />
+                <img src="https://www.southpointschool.edu.ph/images/logo.jpg" alt="Southpoint School Logo" className="h-12 w-auto" />
               </NavLink>
             </div>
-            <nav className="hidden lg:block">
-              <div className="ml-10 flex items-baseline space-x-2">
+            <nav className="hidden md:block">
+              <div className="ml-10 flex items-center space-x-2">
                 {NAV_LINKS.map((link) => (
-                  <div key={link.label} className="relative group">
-                    {link.children ? (
+                  <div key={link.label} className="relative group flex items-center">
+                    {link.isHighlight ? (
+                      link.isExternal ? (
+                        <a
+                          href={link.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ml-4 inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-white bg-battle-green hover:bg-green-800 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap active:scale-95"
+                        >
+                          {link.label}
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      ) : (
+                        <NavLink
+                          to={link.path!}
+                          end
+                          className="ml-4 inline-flex items-center justify-center px-4 py-2 text-sm font-bold text-white bg-battle-green hover:bg-green-800 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap active:scale-95"
+                        >
+                          {link.label}
+                        </NavLink>
+                      )
+                    ) : link.children ? (
                       <button className="relative group px-3 py-2 text-sm font-medium text-gray-700 hover:text-battle-green transition-colors duration-300 flex items-center focus:outline-none">
                         {link.label}
                         <ChevronDownIcon />
@@ -98,7 +119,7 @@ const Header: React.FC = () => {
                 ))}
               </div>
             </nav>
-            <div className="-mr-2 flex lg:hidden">
+            <div className="-mr-2 flex md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-battle-green focus:outline-none"
@@ -111,7 +132,7 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay (for screens < md) */}
+      {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="absolute inset-0 bg-battle-green/95 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
         <div className="relative z-50 h-full w-full flex flex-col p-4">
@@ -125,13 +146,35 @@ const Header: React.FC = () => {
             <nav className="flex-grow flex flex-col items-center justify-center space-y-4">
               {NAV_LINKS.map((link) => (
                 <div key={link.label} className="text-center w-full">
-                  {link.children ? (
+                  {link.isHighlight ? (
+                    link.isExternal ? (
+                      <a
+                        href={link.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="inline-flex items-center justify-center w-4/5 px-6 py-3 text-xl font-bold text-battle-green bg-white hover:bg-gray-100 rounded-full shadow-lg transition-all duration-300 mt-4 active:scale-95"
+                      >
+                        {link.label}
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    ) : (
+                      <NavLink
+                        to={link.path!}
+                        end
+                        onClick={() => setIsMenuOpen(false)}
+                        className="inline-flex items-center justify-center w-4/5 px-6 py-3 text-xl font-bold text-battle-green bg-white hover:bg-gray-100 rounded-full shadow-lg transition-all duration-300 mt-4 active:scale-95"
+                      >
+                        {link.label}
+                      </NavLink>
+                    )
+                  ) : link.children ? (
                     <>
                       <button onClick={() => handleSubmenuToggle(link.label)} className="text-2xl font-semibold text-gray-300 hover:text-white flex items-center justify-center w-full py-2">
                         {link.label}
-                        <div className={`transition-transform duration-300 ${openSubmenu === link.label ? 'rotate-180' : ''}`}>
-                            <ChevronDownIcon />
-                        </div>
+                        <ChevronDownIcon />
                       </button>
                       {openSubmenu === link.label && (
                         <div className="mt-2 space-y-3 bg-black/20 rounded-lg py-3">
@@ -152,67 +195,13 @@ const Header: React.FC = () => {
                     <NavLink
                       to={link.path!}
                       end
-                      className={({ isActive }) => `text-2xl font-semibold transition-colors duration-300 py-2 ${isActive ? 'text-white' : 'text-gray-300 hover:text-white'}`}
+                      className={({ isActive }) => `block text-2xl font-semibold transition-colors duration-300 py-2 ${isActive ? 'text-white' : 'text-gray-300 hover:text-white'}`}
                     >
                       {link.label}
                     </NavLink>
                   )}
                 </div>
               ))}
-            </nav>
-        </div>
-      </div>
-
-       {/* Tablet Menu Overlay (for screens >= md and < lg) */}
-       <div className={`fixed inset-0 z-40 hidden md:block lg:hidden transition-opacity duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-          <div className="absolute inset-0 bg-black/50" onClick={() => setIsMenuOpen(false)}></div>
-          <div className={`relative z-50 h-full w-96 bg-white ml-auto flex flex-col p-6 shadow-xl transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-            <div className="flex justify-between items-center mb-8">
-                <h2 className="text-2xl font-bold text-battle-green">Menu</h2>
-                <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu" className="p-2 text-gray-600 hover:text-battle-green">
-                    <CloseIcon />
-                </button>
-            </div>
-            <nav className="flex-grow">
-                <ul className="space-y-2">
-                    {NAV_LINKS.map((link) => (
-                        <li key={link.label}>
-                            {link.children ? (
-                                <>
-                                    <button onClick={() => handleSubmenuToggle(link.label)} className="w-full flex justify-between items-center py-3 px-4 rounded-lg text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-battle-green">
-                                        <span>{link.label}</span>
-                                        <div className={`transition-transform duration-300 ${openSubmenu === link.label ? 'rotate-180' : ''}`}>
-                                            <ChevronDownIcon />
-                                        </div>
-                                    </button>
-                                    {openSubmenu === link.label && (
-                                        <ul className="pl-6 mt-2 space-y-1">
-                                            {link.children.map(child => (
-                                                <li key={child.path}>
-                                                    <NavLink
-                                                        to={child.path!}
-                                                        end
-                                                        className={({ isActive }) => `block py-2 px-4 rounded-md text-md ${isActive ? 'bg-green-50 text-battle-green font-semibold' : 'text-gray-600 hover:bg-gray-100'}`}
-                                                    >
-                                                        {child.label}
-                                                    </NavLink>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </>
-                            ) : (
-                                <NavLink
-                                    to={link.path!}
-                                    end
-                                    className={({ isActive }) => `block py-3 px-4 rounded-lg text-lg font-medium transition-colors ${isActive ? 'bg-green-100 text-battle-green font-bold' : 'text-gray-700 hover:bg-gray-100 hover:text-battle-green'}`}
-                                >
-                                    {link.label}
-                                </NavLink>
-                            )}
-                        </li>
-                    ))}
-                </ul>
             </nav>
         </div>
       </div>

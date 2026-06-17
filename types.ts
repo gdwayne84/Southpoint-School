@@ -4,6 +4,8 @@ export interface NavLinkInfo {
   label: string;
   path?: string;
   children?: NavLinkInfo[];
+  isExternal?: boolean;
+  isHighlight?: boolean;
 }
 
 export interface ResourceFile {
