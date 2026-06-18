@@ -45,11 +45,6 @@ export const RESOURCE_FILES: ResourceFile[] = [
     url: 'docs/School-Calendar-2026-2027.pdf',
   },
   {
-    name: 'Enrollment Policy Form',
-    description: 'The official form for new and returning student enrollment.',
-    url: 'docs/EPA-s2025.pdf',
-  },
-  {
     name: "Learner's Medical History Form",
     description: "A required form for detailing student medical history and emergency contact information.",
     url: "docs/Learner-Medical-History-Form.pdf",
