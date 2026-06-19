@@ -11,7 +11,7 @@ const carouselImages = [
         alt: 'boy student smiling classroom high school'
     },
     {
-        src: 'images/girl-outside-classroom.jpeg',
+        src: 'images/girl-outside-classroom2.png',
         alt: 'students posing outside classroom high school'
     }
 ];
